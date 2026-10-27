@@ -186,3 +186,286 @@ footer p {
 .menu-general .plato p {
     font-size: 17px;
 }
+/* PANTANO PLAYROOM */
+
+/* CONTENEDOR GENERAL */
+
+.pagina-playroom {
+    padding: 25px;
+    background-color: #f4e7c5;
+}
+
+/* PRIMERA SECCIÓN */
+
+.presentacion-playroom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 25px;
+    background-color: #e8dfc5;
+}
+
+.texto-playroom {
+    width: 30%;
+    text-align: center;
+}
+
+.texto-playroom h1 {
+    font-size: 36px;
+    color: #4f772d;
+}
+
+.texto-playroom p {
+    font-size: 16px;
+}
+
+.fotos-pequenas {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    border-radius: 50px;
+}
+
+.fotos-pequenas img {
+    width: 30%;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.imagen-playroom {
+    width: 40%;
+}
+
+.imagen-playroom img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.frase-playroom {
+    width: 25%;
+    text-align: center;
+}
+
+.frase-playroom h2 {
+    font-size: 22px;
+    color: #4f772d;
+}
+
+.frase-playroom img {
+    width: 80%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* SEGUNDA SECCIÓN: TARJETAS */
+
+.actividades-playroom {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.tarjeta-playroom {
+    width: 25%;
+    background-color: #e8dfc5;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.icono-playroom {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.tarjeta-playroom h3 {
+    font-size: 17px;
+    color: #4f772d;
+}
+
+.tarjeta-playroom p {
+    font-size: 14px;
+}
+
+/* TERCERA SECCIÓN: INFORMACIÓN */
+
+.informacion-playroom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    margin-top: 35px;
+    padding: 20px;
+}
+
+.ambiente-playroom {
+    width: 30%;
+}
+
+.ambiente-playroom img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.mensaje-playroom {
+    width: 35%;
+    text-align: center;
+}
+
+.mensaje-playroom h2 {
+    font-size: 25px;
+    color: #4f772d;
+}
+
+.redes-playroom {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+    font-size: 13px;
+}
+
+.datos-playroom {
+    width: 30%;
+}
+
+.datos-playroom h3 {
+    font-size: 17px;
+    color: #4f772d;
+    margin-bottom: 5px;
+}
+
+.datos-playroom p {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* EFECTO AL PASAR EL MOUSE */
+
+.tarjeta-playroom:hover {
+    background-color: #d5e3b5;
+    transform: scale(1.03);
+}
+
+/* DISEÑO RESPONSIVE: TABLET */
+
+@media screen and (max-width: 992px) {
+
+    .presentacion-playroom {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .texto-playroom,
+    .imagen-playroom,
+    .frase-playroom {
+        width: 45%;
+    }
+
+    .actividades-playroom {
+        flex-wrap: wrap;
+    }
+
+    .tarjeta-playroom {
+        width: 45%;
+        box-sizing: border-box;
+    }
+
+    .informacion-playroom {
+        flex-wrap: wrap;
+    }
+
+    .ambiente-playroom,
+    .mensaje-playroom,
+    .datos-playroom {
+        width: 45%;
+    }
+}
+
+/* DISEÑO RESPONSIVE: CELULAR */
+
+@media screen and (max-width: 600px) {
+
+    .presentacion-playroom,
+    .actividades-playroom,
+    .informacion-playroom {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .texto-playroom,
+    .imagen-playroom,
+    .frase-playroom,
+    .tarjeta-playroom,
+    .ambiente-playroom,
+    .mensaje-playroom,
+    .datos-playroom {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .texto-playroom h1 {
+        font-size: 28px;
+    }
+
+    .imagen-playroom img {
+        height: 200px;
+    }
+
+    .mensaje-playroom h2 {
+        font-size: 22px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .presentacion-playroom {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .presentacion-playroom .texto-playroom,
+    .presentacion-playroom .imagen-playroom,
+    .presentacion-playroom .frase-playroom {
+        width: 100%;
+    }
+}
+.menu-hamburguesa {
+    display: none;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+@media (max-width: 768px) {
+
+    .menu-hamburguesa {
+        display: block;
+    }
+
+    nav {
+        display: none;
+    }
+
+    nav.abierto {
+        display: block;
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .presentacion-playroom {
+        flex-direction: column;
+    }
+}
