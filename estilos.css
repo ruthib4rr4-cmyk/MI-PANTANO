@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Metamorphous&display=swap');
 body {
-    background-color:#F4E7C5;
+    background-color:#f0eee8;
     font-family: 'Metamorphous', cursive;
     text-align:center;
 }
@@ -121,4 +121,68 @@ box-sizing: border-box;
 footer p {
     color: #F4E7C5;
     text-align: center;
+}
+@media screen and (max-width: 992px) {principal {
+    flex-direction: column;
+    
+
+}
+.texto-principal {
+    width: 90%;
+    text-align: center;
+}.imagen-principal {
+    width: 90%;
+    max-width: 450px;
+}
+.lista-categorias {
+    flex-wrap: wrap;
+}
+.foto-categoria {
+    width: 90%;
+    max-width: 450px;
+}
+.categoria {
+    width: 45%;
+};
+}
+ .menu-general h2 {
+    font-size: 28px;
+}
+.menu-general img {
+    width: 250px;
+    height: auto;
+}
+.menu-general {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    justify-content: space-around;
+}
+.menu-general h1 {
+    width: 100%;
+    text-align: center;
+}
+.menu-general .plato img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.menu-general .plato {
+    flex: 0 0 22%;
+    text-align: center;
+    box sizing: border-box;
+}
+.logo img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.menu-general .plato h2 {
+    font-size: 30px;
+}
+
+.menu-general .plato p {
+    font-size: 17px;
 }
