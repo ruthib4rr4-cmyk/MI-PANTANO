@@ -2,12 +2,13 @@
   <head>
     <title>MI PANTANO</title>
 <link rel="stylesheet" href="estilos.css">
-    <link rel="stylesheet" href="estilos.css">
   </head>
 
   <body>
       <header>
-        <div class="logo">S</div>
+       <div class="logo">
+    <img src="./fotos/logo.jpg" alt="Logo de Mi Pantano">
+</div>
 <button class="menu-hamburguesa" onclick="document.querySelector('nav').classList.toggle('abierto')">☰</button>
     <nav>
         <ul><li><a href="index.html">INICIO</a></li>
@@ -19,58 +20,97 @@
     </nav>
   </header>
   <main>
-    <section class="principal">
-    <div class="texto-principal">
-    <h1>ÉRASE UNA VEZ:</h1>
-    <h2>MI PANTANO</h2>
-    <p>Un lugar donde los cuentos se sirven en la mesa</p>
-    <a class="boton" href="menu.html">CONOCÉ NUESTRO MENÚ</a>
-    </div>
-     <div class="imagen-principal">
-      <img src="./fotos/olla.png" >
+   <section class="principal">
 
-      
-    </div>
+    <h1 class="titulo-inicio">ÉRASE UNA VEZ: MI PANTANO</h1>
+
   
-    </section>
-    <section class="categorias">
-    <h2>NUESTROS SABORES</h2>
-        <div class="lista-categorias">
+</section> 
 
+<section class="categorias">
+
+    <div class="lista-categorias">
+
+        <!-- FIONA -->
+        <div class="categoria">
+            <a href="fiona.html" class="enlace-categoria">
+                <div class="foto-categoria">
+                    <img src="./fotos/fiona.png" alt="Suspiros de Fiona">
+                </div>
+                <h3>SUSPIROS DE FIONA</h3>
+            </a>
+        </div>
+
+        <!-- BURRO -->
        <div class="categoria">
-    <div class="foto-categoria">
-        <img src="./fotos/fiona.png">
-    </div>
-    <h3>SUSPIROS DE FIONA</h3>
+    <a href="burro.html" class="enlace-categoria">
+        <div class="foto-categoria">
+            <img src="./fotos/burro.png" alt="Elegidos de Burro">
+        </div>
+        <h3>ELEGIDOS DE BURRO</h3>
+    </a>
 </div>
-   
+    <div class="categoria">
+    <a href="shrek.html" class="enlace-categoria">
+        <div class="foto-categoria">
+            <img src="./fotos/shrek.png" alt="Pastelería Horripilante">
+        </div>
+        <h3>PASTELERÍA HORRIPILANTE</h3>
+    </a>
+</div>  
+<!-- DRAGONA -->
 <div class="categoria">
-    <div class="foto-categoria">
-    <img src="./fotos/burro.png">
-  
-      </div>
-         <h3>ELEGIDOS DE BURRO</h3>
-  </div>
-
-<div class="categoria">
-    <div class="foto-categoria">
-        <img src="./fotos/shrek.png">
-    </div>
-    <h3>PASTELERÍA HORRIPILANTE</h3>
+    <a href="picante.html" class="enlace-categoria">
+        <div class="foto-categoria">
+            <img src="./fotos/dragona1.jpeg" alt="Sabores Picantes">
+        </div>
+        <h3>SABORES PICANTES</h3>
+    </a>
 </div>
-
-      <div class="categoria">
-          <div class="foto-categoria">
-                    <img src="./fotos/dragona.png">
-                        </div>
-    <h3>SABORES PICANTES</h3>
     </div>
 
-</div>
-    </section>
+</section>
   </main>
-  <footer>
-    <p>TE ESPERAMOS!!!</p>
+  <footer class="info-inicio">
+
+    <!-- IZQUIERDA: CARTEL -->
+    <div class="info-cartel">
+        <img src="./fotos/mipantano.png" alt="Cartel Mi Pantano">
+    </div>
+
+    <!-- CENTRO: REDES SOCIALES -->
+    <div class="info-redes">
+        <h2>¡SEGUINOS EN EL PANTANO!</h2>
+
+        <div class="redes-playroom">
+
+            <a href="https://www.instagram.com/dreamworks/" target="_blank">
+                <img src="./fotos/instagram.png" alt="Instagram">
+            </a>
+
+            <a href="https://www.facebook.com/DreamWorksAnimation/" target="_blank">
+                <img src="./fotos/facebook.png" alt="Facebook">
+            </a>
+
+            <a href="https://www.whatsapp.com/" target="_blank">
+                <img src="./fotos/whatsapp.png" alt="WhatsApp">
+            </a>
+
+            <a href="https://www.tiktok.com/@dreamworks" target="_blank">
+                <img src="./fotos/tiktok.png" alt="TikTok">
+            </a>
+
+        </div>
+    </div>
+
+    <!-- DERECHA: INFORMACIÓN -->
+    <div class="info-datos">
+        <h2>¡TE ESPERAMOS!</h2>
+        <p>📍 San Fernando, Buenos Aires</p>
+        <p>🕒 Martes a domingos, de 12 a 22 h</p>
+        <p>🍽️ ¡Vení a vivir una experiencia de cuento!</p>
+    </div>
+
 </footer>
   </body>
 </html>

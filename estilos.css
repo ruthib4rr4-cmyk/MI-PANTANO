@@ -87,10 +87,10 @@ overflow: hidden;
 
 }
 .foto-categoria {
-    width: 180px;
-    height: 180px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
-    background-color: #c18e0d;
+    background-color: transparent;
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -121,6 +121,7 @@ box-sizing: border-box;
 footer p {
     color: #F4E7C5;
     text-align: center;
+    font-size: 26px;
 }
 @media screen and (max-width: 992px) {principal {
     flex-direction: column;
@@ -171,7 +172,7 @@ footer p {
 .menu-general .plato {
     flex: 0 0 22%;
     text-align: center;
-    box sizing: border-box;
+    box-sizing: border-box;
 }
 .logo img {
     width: 150px;
@@ -192,8 +193,7 @@ footer p {
 
 .pagina-playroom {
     padding: 25px;
-    background-color: #f4e7c5;
-}
+background-color: #f1f0ed;}
 
 /* PRIMERA SECCIÓN */
 
@@ -203,38 +203,38 @@ footer p {
     align-items: center;
     gap: 20px;
     padding: 25px;
-    background-color: #e8dfc5;
+    background-color: transparent;
 }
 
 .texto-playroom {
-    width: 30%;
+    width: 100%;
     text-align: center;
 }
 
 .texto-playroom h1 {
-    font-size: 36px;
+    font-size: 30px;
     color: #4f772d;
+    text-align: center;
+    width: 100%;
 }
 
 .texto-playroom p {
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .fotos-pequenas {
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-    border-radius: 50px;
+        flex-wrap: wrap;
+    gap: 60px;
 }
 
 .fotos-pequenas img {
-    width: 30%;
-    height: 90px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
     object-fit: cover;
-    border-radius: 10px;
 }
-
 .imagen-playroom {
     width: 40%;
 }
@@ -311,7 +311,7 @@ footer p {
 
 .ambiente-playroom img {
     width: 100%;
-    height: 200px;
+    height: auto;
     object-fit: cover;
     border-radius: 12px;
 }
@@ -334,7 +334,17 @@ footer p {
     margin-top: 25px;
     font-size: 13px;
 }
-
+.redes-playroom a {
+    color: #4f772d;
+    font-size: 20px;
+    text-decoration: none;
+}
+.redes-playroom img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
 .datos-playroom {
     width: 30%;
 }
@@ -468,4 +478,382 @@ footer p {
     .presentacion-playroom {
         flex-direction: column;
     }
+}/* AJUSTES FINALES PANTANO PLAYROOM - CELULAR */
+
+@media screen and (max-width: 600px) {
+
+    .pagina-playroom {
+        padding: 10px;
+    }
+
+    .presentacion-playroom {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .fotos-pequenas {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .fotos-pequenas img {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .actividades-playroom {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .tarjeta-playroom {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .informacion-playroom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .ambiente-playroom img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .redes-playroom {
+        justify-content: center;
+    }
+}
+/* FOTOS DEL PLAYROOM EN CELULAR */
+
+@media screen and (max-width: 600px) {
+
+   .fotos-pequenas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+} 
+
+    .fotos-pequenas img {
+        width: 300px;
+        height: 300px;
+        max-width: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+}/* INICIO: CARTEL PRINCIPAL */
+
+.cartel-inicio {
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* INICIO: DISEÑO PARA CELULARES */
+
+@media screen and (max-width: 600px) {
+
+    .principal {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .lista-categorias {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .categoria {
+        width: 100%;
+        text-align: center;
+    }
+
+    .foto-categoria img {
+        width: 300px;
+        height: 300px;
+        max-width: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+}/* CARTEL Y BOTÓN DE INICIO */
+
+.principal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.principal .texto-principal {
+    width: auto;
+    flex: 0 1 650px;
+}
+
+.cartel-inicio {
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    border-radius: 30px;
+}
+
+.boton-inicio {
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+/* INICIO EN CELULARES */
+
+@media screen and (max-width: 768px) {
+
+    .principal {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .principal .texto-principal {
+        width: 100%;
+        flex: none;
+    }
+
+    .cartel-inicio {
+        max-width: 100%;
+        border-radius: 20px;
+    }
+
+    .boton-inicio {
+        margin: 0 auto;
+    }
+}
+}/* REDES SOCIALES EN EL FOOTER */
+
+.footer .redes-playroom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.footer .redes-playroom img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.footer .redes-playroom img:hover {
+    transform: scale(1.15);
+}/* SECCIÓN INFERIOR DE INICIO */
+
+.info-inicio {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    padding: 40px 25px;
+    background-color: #4f772d;
+    color: #f4e7c5;
+}
+
+/* TRES COLUMNAS */
+
+.info-cartel,
+.info-redes,
+.info-datos {
+    flex: 1;
+    text-align: center;
+    min-width: 0;
+}
+
+/* CARTEL */
+
+.info-cartel img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 20px;
+}
+
+/* TÍTULOS */
+
+.info-inicio h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #f4e7c5;
+}
+
+/* REDES SOCIALES */
+
+.info-redes .redes-playroom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.info-redes .redes-playroom img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* INFORMACIÓN */
+
+.info-datos p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #f4e7c5;
+}
+
+/* DISEÑO RESPONSIVE */
+
+@media screen and (max-width: 768px) {
+
+    .info-inicio {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 30px 20px;
+    }
+
+    .info-cartel,
+    .info-redes,
+    .info-datos {
+        width: 100%;
+        flex: none;
+    }
+
+    .info-cartel img {
+        max-width: 250px;
+    }
+}
+/* CORREGIR ENLACES DE LAS CATEGORÍAS */
+
+.enlace-categoria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+}
+
+.enlace-categoria h3 {
+    color: #4f772d;
+    text-align: center;
+}
+
+.enlace-categoria:visited h3 {
+    color: #4f772d;
+}/* ENLACE DE FIONA */
+
+.enlace-categoria {
+    display: block;
+    text-decoration: none;
+}
+
+.enlace-categoria h3 {
+    color: #4f772d;
+}
+
+.enlace-categoria:hover h3 {
+    color: #c58d08;
+}/* TÍTULO DE FIONA */
+
+.titulo-fiona {
+    width: 100%;
+    text-align: center;
+    font-size: 36px;
+    color: #4f772d;
+    margin: 30px 0 40px;
+}
+
+/* FOOTER DE FIONA */
+
+.footer-fiona {
+    background-color: #4f772d;
+    padding: 35px 20px;
+    text-align: center;
+}
+
+.footer-fiona h2 {
+    color: #f4e7c5;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.footer-fiona .redes-playroom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-fiona .redes-playroom img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* ADAPTACIÓN A CELULARES */
+
+@media screen and (max-width: 600px) {
+
+    .titulo-fiona {
+        font-size: 28px;
+    }
+
+    .footer-fiona .redes-playroom {
+        flex-wrap: wrap;
+    }
+}/* TÍTULO PRINCIPAL DE INICIO */
+.titulo-inicio {
+    font-size: 40px;
+    text-align: center;
+}
+
+/* TÍTULO EN CELULARES */
+@media screen and (max-width: 600px) {
+    .titulo-inicio {
+        font-size: 32px;
+    }
+
+}/* Separación entre las tarjetas y el footer de Playroom */
+.separacion-playroom {
+    margin-top: 40px;
+  }  
+/* Ajuste exclusivo de Sabores Picantes */
+.foto-categoria img[alt="Sabores Picantes"] {
+    object-fit: contain;
+    object-position: center;
 }
