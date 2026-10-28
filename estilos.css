@@ -20,11 +20,22 @@ li {
     margin: 15px;
     margin-top: 30px;
 }
-a {text-decoration:none;color:#F4E7C5 ;}
+a {
+    text-decoration: none;
+    color: #F4E7C5;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+nav a {
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+}
+nav a:hover {
+    color: #ffd875;
+    border-bottom-color: #ffd875;
+}
 .logo {
     font-size: 60px;
     color: #b37f0e;
-
 }
 h1 {
     font-size: 25px;
@@ -32,8 +43,7 @@ h1 {
 }
 h2 {
     font-size: 60px;
-    color: c18e0d;
-    
+    color: #c18e0d;
 }
 p {
     font-size: 15px;
@@ -123,28 +133,32 @@ footer p {
     text-align: center;
     font-size: 26px;
 }
-@media screen and (max-width: 992px) {principal {
-    flex-direction: column;
-    
-
-}
-.texto-principal {
-    width: 90%;
-    text-align: center;
-}.imagen-principal {
-    width: 90%;
-    max-width: 450px;
-}
-.lista-categorias {
-    flex-wrap: wrap;
-}
-.foto-categoria {
-    width: 90%;
-    max-width: 450px;
-}
-.categoria {
-    width: 45%;
-};
+@media screen and (max-width: 992px) {
+    .principal {
+        flex-direction: column;
+    }
+    .texto-principal {
+        width: 90%;
+        text-align: center;
+    }
+    .imagen-principal {
+        width: 90%;
+        max-width: 450px;
+    }
+    .lista-categorias {
+        flex-wrap: wrap;
+    }
+    .foto-categoria {
+        width: 90%;
+        max-width: 450px;
+    }
+    .categoria {
+        width: 45%;
+    }
+    .menu-general .plato {
+        flex: 0 0 45%;
+        margin-bottom: 25px;
+    }
 }
  .menu-general h2 {
     font-size: 28px;
@@ -166,13 +180,22 @@ footer p {
 .menu-general .plato img {
     width: 300px;
     height: 300px;
+    max-width: 100%;
     object-fit: cover;
     border-radius: 50%;
+    transition: transform 0.3s ease;
 }
 .menu-general .plato {
     flex: 0 0 22%;
     text-align: center;
     box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+.menu-general .plato:hover {
+    transform: translateY(-5px);
+}
+.menu-general .plato:hover img {
+    transform: scale(1.04);
 }
 .logo img {
     width: 150px;
@@ -457,6 +480,10 @@ background-color: #f1f0ed;}
     cursor: pointer;
 }
 @media (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+        padding: 10px 25px;
+    }
 
     .menu-hamburguesa {
         display: block;
@@ -469,10 +496,17 @@ background-color: #f1f0ed;}
     nav.abierto {
         display: block;
         width: 100%;
+        margin-top: 15px;
     }
 
     nav ul {
         flex-direction: column;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav li {
+        margin: 10px 0;
     }
 
     .presentacion-playroom {
@@ -649,7 +683,7 @@ background-color: #f1f0ed;}
         margin: 0 auto;
     }
 }
-}/* REDES SOCIALES EN EL FOOTER */
+/* REDES SOCIALES EN EL FOOTER */
 
 .footer .redes-playroom {
     display: flex;
@@ -756,7 +790,7 @@ background-color: #f1f0ed;}
         max-width: 250px;
     }
 }
-/* CORREGIR ENLACES DE LAS CATEGORÍAS */
+/* ENLACES DE LAS CATEGORÍAS */
 
 .enlace-categoria {
     display: flex;
@@ -765,28 +799,33 @@ background-color: #f1f0ed;}
     text-decoration: none;
     color: inherit;
     width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.enlace-categoria:hover {
+    transform: translateY(-8px);
 }
 
 .enlace-categoria h3 {
     color: #4f772d;
     text-align: center;
+    transition: color 0.3s ease;
 }
 
 .enlace-categoria:visited h3 {
-    color: #4f772d;
-}/* ENLACE DE FIONA */
-
-.enlace-categoria {
-    display: block;
-    text-decoration: none;
-}
-
-.enlace-categoria h3 {
     color: #4f772d;
 }
 
 .enlace-categoria:hover h3 {
     color: #c58d08;
+}
+
+.foto-categoria img {
+    transition: transform 0.4s ease;
+}
+
+.enlace-categoria:hover .foto-categoria img {
+    transform: scale(1.06);
 }/* TÍTULO DE FIONA */
 
 .titulo-fiona {
