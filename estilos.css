@@ -896,3 +896,262 @@ background-color: #f1f0ed;}
     object-fit: contain;
     object-position: center;
 }
+
+/* =========================================
+   ESTILOS PARA RESERVAS Y CONTACTO
+   ========================================= */
+
+.pagina-reservas,
+.pagina-contacto {
+    padding: 20px 15px 50px;
+    background-color: #f0eee8;
+    min-height: 70vh;
+}
+
+.seccion-formulario {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.subtitulo-seccion {
+    font-size: 18px;
+    color: #4F772D;
+    margin-top: -20px;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+/* CONTENEDOR DE FORMULARIO */
+.contenedor-formulario {
+    background-color: #e8dfc5;
+    border-radius: 18px;
+    padding: 35px 40px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border: 2px solid #d9cca8;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.pagina-reservas .contenedor-formulario {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.contenedor-formulario h2 {
+    font-size: 24px;
+    color: #4F772D;
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* CAMPOS DE FORMULARIO */
+.campo-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.campo-form label {
+    font-size: 15px;
+    font-weight: bold;
+    color: #4F772D;
+    margin-bottom: 8px;
+}
+
+.campo-form input,
+.campo-form select,
+.campo-form textarea {
+    padding: 12px 14px;
+    font-size: 15px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #2b3a1a;
+    background-color: #ffffff;
+    border: 2px solid #c9b990;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-sizing: border-box;
+}
+
+.campo-form input:focus,
+.campo-form select:focus,
+.campo-form textarea:focus {
+    border-color: #4F772D;
+    box-shadow: 0 0 8px rgba(79, 119, 45, 0.25);
+}
+
+.campo-form textarea {
+    resize: vertical;
+    min-height: 85px;
+}
+
+.fila-campos {
+    display: flex;
+    gap: 20px;
+}
+
+.campo-mitad {
+    flex: 1;
+}
+
+/* BOTONES DE FORMULARIO */
+.boton-formulario {
+    width: 100%;
+    background-color: #4F772D;
+    color: #F4E7C5;
+    border: none;
+    padding: 15px 25px;
+    font-size: 18px;
+    font-family: 'Metamorphous', cursive;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 4px 12px rgba(79, 119, 45, 0.3);
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.boton-formulario:hover {
+    background-color: #3b5a22;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(79, 119, 45, 0.4);
+}
+
+.aclaracion-form {
+    font-size: 13px;
+    color: #635b46;
+    text-align: center;
+    margin-top: 12px;
+    margin-bottom: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* PÁGINA CONTACTO: ESTRUCTURA 2 COLUMNAS */
+.contacto-contenedor {
+    display: flex;
+    gap: 35px;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.contacto-contenedor .contenedor-formulario {
+    flex: 1.2;
+}
+
+.contacto-tarjeta-info {
+    flex: 0.9;
+    background-color: #e8dfc5;
+    border-radius: 18px;
+    padding: 35px 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border: 2px solid #d9cca8;
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contacto-tarjeta-info h2 {
+    font-size: 24px;
+    color: #4F772D;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.contacto-foto-olla {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background-color: #d9cca8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: inset 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.contacto-foto-olla img {
+    width: 85%;
+    height: auto;
+    object-fit: contain;
+}
+
+.contacto-item {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.contacto-icono {
+    font-size: 26px;
+    line-height: 1;
+}
+
+.contacto-item h3 {
+    margin: 0 0 4px 0;
+    font-size: 16px;
+    color: #4F772D;
+}
+
+.contacto-item p {
+    margin: 0;
+    font-size: 14px;
+    color: #4a4433;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.nota-lunes {
+    font-style: italic;
+    color: #8c7f5f !important;
+    font-size: 12px !important;
+    margin-top: 3px !important;
+}
+
+.boton-chat-directo {
+    display: block;
+    background-color: #c18e0d;
+    color: #F4E7C5;
+    text-decoration: none;
+    padding: 13px 20px;
+    font-size: 16px;
+    font-family: 'Metamorphous', cursive;
+    border-radius: 12px;
+    margin-top: 15px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 12px rgba(193, 142, 13, 0.3);
+}
+
+.boton-chat-directo:hover {
+    background-color: #a87907;
+    transform: translateY(-2px);
+}
+
+/* RESPONSIVE PARA RESERVAS Y CONTACTO */
+@media screen and (max-width: 768px) {
+    .contacto-contenedor {
+        flex-direction: column;
+    }
+
+    .fila-campos {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .contenedor-formulario,
+    .contacto-tarjeta-info {
+        padding: 25px 20px;
+    }
+
+    .subtitulo-seccion {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    .boton-formulario {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas - Mi Pantano</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./fotos/logo.jpg" alt="Logo de Mi Pantano">
+        </div>
+        <button class="menu-hamburguesa" onclick="document.querySelector('nav').classList.toggle('abierto')">☰</button>
+        <nav>
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="menu.html">MENÚ GRAL.</a></li>
+                <li><a href="playroom.html">PANTANO PLAYROOM</a></li>
+                <li><a href="reservas.html">RESERVAS</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="pagina-reservas">
+        <section class="seccion-formulario">
+            <h1 class="titulo-fiona">RESERVÁ TU MESA EN EL PANTANO</h1>
+            <p class="subtitulo-seccion">Asegurá tu lugar antes de que lleguen todas las criaturas del reino.</p>
+
+            <div class="contenedor-formulario">
+                <form id="form-reservas">
+                    <div class="campo-form">
+                        <label for="res-nombre">Nombre y Apellido</label>
+                        <input type="text" id="res-nombre" name="nombre" required placeholder="Ej: Shrek o Princesa Fiona">
+                    </div>
+
+                    <div class="campo-form">
+                        <label for="res-telefono">Teléfono / Celular (WhatsApp)</label>
+                        <input type="tel" id="res-telefono" name="telefono" required placeholder="Ej: 11 6115 9802">
+                    </div>
+
+                    <div class="fila-campos">
+                        <div class="campo-form campo-mitad">
+                            <label for="res-fecha">Fecha de la Reserva</label>
+                            <input type="date" id="res-fecha" name="fecha" required>
+                        </div>
+
+                        <div class="campo-form campo-mitad">
+                            <label for="res-hora">Horario</label>
+                            <select id="res-hora" name="hora" required>
+                                <option value="" disabled selected>Elegí un turno</option>
+                                <optgroup label="Almuerzo">
+                                    <option value="12:30">12:30 hs</option>
+                                    <option value="13:30">13:30 hs</option>
+                                    <option value="14:30">14:30 hs</option>
+                                </optgroup>
+                                <optgroup label="Merienda">
+                                    <option value="16:30">16:30 hs</option>
+                                    <option value="17:30">17:30 hs</option>
+                                </optgroup>
+                                <optgroup label="Cena">
+                                    <option value="20:00">20:00 hs</option>
+                                    <option value="21:00">21:00 hs</option>
+                                    <option value="22:00">22:00 hs</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="fila-campos">
+                        <div class="campo-form campo-mitad">
+                            <label for="res-personas">Cantidad de Comensales</label>
+                            <select id="res-personas" name="personas" required>
+                                <option value="2 personas">2 personas</option>
+                                <option value="3 personas">3 personas</option>
+                                <option value="4 personas" selected>4 personas</option>
+                                <option value="5 personas">5 personas</option>
+                                <option value="6 personas">6 personas</option>
+                                <option value="7 a 10 personas">7 a 10 personas</option>
+                                <option value="Más de 10 personas">Más de 10 (Mesa Larga de Ogro)</option>
+                            </select>
+                        </div>
+
+                        <div class="campo-form campo-mitad">
+                            <label for="res-sector">Sector Temático</label>
+                            <select id="res-sector" name="sector" required>
+                                <option value="Cabaña de Shrek (Al aire libre)">Cabaña de Shrek (Al aire libre)</option>
+                                <option value="Castillo de Duloc (Salón Principal)">Castillo de Duloc (Salón Principal)</option>
+                                <option value="Rincón de Burro y Dragona (Cerca de Playroom)">Rincón de Burro (Playroom)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="campo-form">
+                        <label for="res-mensaje">Comentarios o pedidos especiales (opcional)</label>
+                        <textarea id="res-mensaje" name="mensaje" rows="3" placeholder="¿Festejo de cumpleaños, menú celíaco/vegano, sillita para niños?"></textarea>
+                    </div>
+
+                    <button type="submit" class="boton-formulario">
+                        🏰 Confirmar Reserva por WhatsApp
+                    </button>
+                    <p class="aclaracion-form">Se abrirá WhatsApp con los datos de tu reserva listos para enviar directo a nuestro celular.</p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="info-inicio">
+        <!-- IZQUIERDA: CARTEL -->
+        <div class="info-cartel">
+            <img src="./fotos/mipantano.png" alt="Cartel Mi Pantano">
+        </div>
+
+        <!-- CENTRO: REDES SOCIALES -->
+        <div class="info-redes">
+            <h2>¡SEGUINOS EN EL PANTANO!</h2>
+            <div class="redes-playroom">
+                <a href="https://www.instagram.com/dreamworks/" target="_blank">
+                    <img src="./fotos/instagram.png" alt="Instagram">
+                </a>
+                <a href="https://www.facebook.com/DreamWorksAnimation/" target="_blank">
+                    <img src="./fotos/facebook.png" alt="Facebook">
+                </a>
+                <a href="https://wa.me/5491161159802" target="_blank">
+                    <img src="./fotos/whatsapp.png" alt="WhatsApp">
+                </a>
+                <a href="https://www.tiktok.com/@dreamworks" target="_blank">
+                    <img src="./fotos/tiktok.png" alt="TikTok">
+                </a>
+            </div>
+        </div>
+
+        <!-- DERECHA: INFORMACIÓN -->
+        <div class="info-datos">
+            <h2>¡TE ESPERAMOS!</h2>
+            <p>📍 San Fernando, Buenos Aires</p>
+            <p>🕒 Martes a domingos, de 12 a 22 h</p>
+            <p>🍽️ ¡Vení a vivir una experiencia de cuento!</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('form-reservas').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const nombre = document.getElementById('res-nombre').value;
+            const tel = document.getElementById('res-telefono').value;
+            const fecha = document.getElementById('res-fecha').value;
+            const hora = document.getElementById('res-hora').value;
+            const personas = document.getElementById('res-personas').value;
+            const sector = document.getElementById('res-sector').value;
+            const mensaje = document.getElementById('res-mensaje').value;
+
+            let texto = "¡Hola Mi Pantano! 🧌 Quisiera hacer una reserva:%0A%0A" +
+                        "• *Nombre:* " + encodeURIComponent(nombre) + "%0A" +
+                        "• *Teléfono:* " + encodeURIComponent(tel) + "%0A" +
+                        "• *Fecha:* " + encodeURIComponent(fecha) + "%0A" +
+                        "• *Horario:* " + encodeURIComponent(hora) + "%0A" +
+                        "• *Comensales:* " + encodeURIComponent(personas) + "%0A" +
+                        "• *Sector:* " + encodeURIComponent(sector);
+
+            if (mensaje.trim() !== "") {
+                texto += "%0A• *Comentarios:* " + encodeURIComponent(mensaje);
+            }
+
+            const url = "https://wa.me/5491161159802?text=" + texto;
+            window.open(url, "_blank");
+        });
+    </script>
+</body>
+</html>
