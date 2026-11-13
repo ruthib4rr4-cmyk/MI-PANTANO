@@ -1,119 +1,199 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Pantano - Restaurante Temático</title>
+    <title>Mi Pantano - Restaurante Temático de Cuento</title>
     <link rel="stylesheet" href="estilos.css">
-  </head>
+</head>
 
-  <body>
-      <header>
-       <div class="logo">
-    <img src="./fotos/logo.jpg" alt="Logo de Mi Pantano">
-</div>
-<button class="menu-hamburguesa" onclick="document.querySelector('nav').classList.toggle('abierto')">☰</button>
-    <nav>
-        <ul><li><a href="index.html">INICIO</a></li>
-        <li><a href="menu.html">MENÚ GRAL.</a></li>
-        <li><a href="playroom.html">PANTANO PLAYROOM</a></li>
-        <li><a href="reservas.html">RESERVAS</a></li>
-        <li><a href="contacto.html">CONTACTO</a></li>
-    </ul>
-    </nav>
-  </header>
-  <main>
-   <section class="principal">
+<body>
+    <!-- ENCABEZADO -->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="./fotos/logo.jpg" alt="Logo de Mi Pantano">
+            </a>
+        </div>
+        <!-- Botón para desplegar el menú en celulares -->
+        <button type="button" class="menu-hamburguesa" onclick="alternarMenu()">☰</button>
+        <nav id="menu-navegacion">
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="menu.html">MENÚ GRAL.</a></li>
+                <li><a href="playroom.html">PANTANO PLAYROOM</a></li>
+                <li><a href="reservas.html">RESERVAS</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <h1 class="titulo-inicio">ÉRASE UNA VEZ: MI PANTANO</h1>
+    <main>
+        <!-- SECCIÓN PRINCIPAL DE BIENVENIDA (FONDO DE LA CASA DE SHREK) -->
+        <section class="principal hero-inicio">
+            <div class="hero-contenido">
+                <h1 class="titulo-inicio">ÉRASE UNA VEZ: MI PANTANO</h1>
+                <p class="subtitulo-hero">Un lugar donde los cuentos y la diversión se sirven en la mesa</p>
+                <a href="menu.html" class="boton-pantano">CONOCÉ NUESTRO MENÚ</a>
+            </div>
+        </section>
 
-  
-</section> 
+        <!-- SECCIÓN DE PERSONAJES (DECORATIVOS Y ARMONIOSOS) -->
+        <section class="categorias">
+            <h2 class="categorias-titulo">NUESTROS SABORES Y RINCONES</h2>
+            <p class="categorias-subtitulo">Elegí el rincón favorito de tu personaje del pantano:</p>
 
-<section class="categorias">
-
-    <div class="lista-categorias">
-
-        <!-- FIONA -->
-        <div class="categoria">
-            <a href="fiona.html" class="enlace-categoria">
-                <div class="foto-categoria">
-                    <img src="./fotos/fiona.png" alt="Suspiros de Fiona">
+            <div class="lista-categorias">
+                <!-- FIONA -->
+                <div class="categoria">
+                    <a href="fiona.html" class="enlace-categoria">
+                        <div class="foto-categoria">
+                            <img src="./fotos/fiona.png" alt="Suspiros de Fiona">
+                        </div>
+                        <h3>SUSPIROS DE FIONA</h3>
+                    </a>
                 </div>
-                <h3>SUSPIROS DE FIONA</h3>
-            </a>
+
+                <!-- BURRO -->
+                <div class="categoria">
+                    <a href="burro.html" class="enlace-categoria">
+                        <div class="foto-categoria">
+                            <img src="./fotos/burro.png" alt="Elegidos de Burro">
+                        </div>
+                        <h3>ELEGIDOS DE BURRO</h3>
+                    </a>
+                </div>
+
+                <!-- SHREK -->
+                <div class="categoria">
+                    <a href="shrek.html" class="enlace-categoria">
+                        <div class="foto-categoria">
+                            <img src="./fotos/shrek.png" alt="Pastelería Horripilante">
+                        </div>
+                        <h3>PASTELERÍA HORRIPILANTE</h3>
+                    </a>
+                </div>
+
+                <!-- DRAGONA -->
+                <div class="categoria">
+                    <a href="picante.html" class="enlace-categoria">
+                        <div class="foto-categoria">
+                            <img src="./fotos/dragona1.jpeg" alt="Sabores Picantes">
+                        </div>
+                        <h3>SABORES PICANTES</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN INTERACTIVA: JAVASCRIPT CON FRASES ALEATORIAS -->
+        <section class="seccion-frases">
+            <div class="caja-frase-pantano">
+                <div class="decoracion-ogro">📜</div>
+                <h2>SABIDURÍA DEL PANTANO</h2>
+                <p class="frase-subtitulo">Hacé clic para escuchar un consejo o frase típica de Shrek y sus amigos:</p>
+
+                <div class="globo-frase">
+                    <p id="texto-frase">"¡Mejor afuera que adentro, siempre digo!"</p>
+                    <span id="autor-frase">— Shrek</span>
+                </div>
+
+                <!-- Botón con evento onclick para llamar a la función JavaScript -->
+                <button type="button" class="boton-frase" onclick="mostrarFraseAleatoria()">
+                    🧌 Ver otra frase del pantano
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="info-inicio">
+        <!-- IZQUIERDA: CARTEL -->
+        <div class="info-cartel">
+            <img src="./fotos/mipantano.png" alt="Cartel Mi Pantano">
         </div>
 
-        <!-- BURRO -->
-       <div class="categoria">
-    <a href="burro.html" class="enlace-categoria">
-        <div class="foto-categoria">
-            <img src="./fotos/burro.png" alt="Elegidos de Burro">
+        <!-- CENTRO: REDES SOCIALES -->
+        <div class="info-redes">
+            <h2>¡SEGUINOS EN EL PANTANO!</h2>
+            <div class="redes-playroom">
+                <a href="https://www.instagram.com/dreamworks/" target="_blank">
+                    <img src="./fotos/instagram.png" alt="Instagram">
+                </a>
+                <a href="https://www.facebook.com/DreamWorksAnimation/" target="_blank">
+                    <img src="./fotos/facebook.png" alt="Facebook">
+                </a>
+                <a href="https://wa.me/5491161159802" target="_blank">
+                    <img src="./fotos/whatsapp.png" alt="WhatsApp">
+                </a>
+                <a href="https://www.tiktok.com/@dreamworks" target="_blank">
+                    <img src="./fotos/tiktok.png" alt="TikTok">
+                </a>
+            </div>
         </div>
-        <h3>ELEGIDOS DE BURRO</h3>
-    </a>
-</div>
-    <div class="categoria">
-    <a href="shrek.html" class="enlace-categoria">
-        <div class="foto-categoria">
-            <img src="./fotos/shrek.png" alt="Pastelería Horripilante">
+
+        <!-- DERECHA: INFORMACIÓN -->
+        <div class="info-datos">
+            <h2>¡TE ESPERAMOS!</h2>
+            <p>📍 San Fernando, Buenos Aires</p>
+            <p>🕒 Martes a domingos, de 12 a 22 h</p>
+            <p>🍽️ ¡Vení a vivir una experiencia de cuento!</p>
         </div>
-        <h3>PASTELERÍA HORRIPILANTE</h3>
-    </a>
-</div>  
-<!-- DRAGONA -->
-<div class="categoria">
-    <a href="picante.html" class="enlace-categoria">
-        <div class="foto-categoria">
-            <img src="./fotos/dragona1.jpeg" alt="Sabores Picantes">
-        </div>
-        <h3>SABORES PICANTES</h3>
-    </a>
-</div>
-    </div>
+    </footer>
 
-</section>
-  </main>
-  <footer class="info-inicio">
+    <!-- ==============================================================
+         JAVASCRIPT DIDÁCTICO PARA EL EXAMEN ORAL
+         Contenidos del curso de Joaquín Molinos:
+         - Variables con var y const
+         - Arrays y objetos sencillos
+         - Funciones tradicionales con 'function'
+         - Math.random() y Math.floor()
+         - document.getElementById() e innerHTML
+         - Condicional if / else
+         - console.log()
+         ============================================================== -->
+    <script>
+        // 1. Array que guarda objetos con las frases de los personajes
+        const frasesDelPantano = [
+            { texto: "¡Mejor afuera que adentro, siempre digo!", autor: "Shrek" },
+            { texto: "¡Los ogros son como cebollas! ¡Tienen capas!", autor: "Shrek" },
+            { texto: "En la mañana, ¡yo preparo los waffles!", autor: "Burro" },
+            { texto: "¿Ya merito llegamos? ¿Ya merito?", autor: "Burro" },
+            { texto: "De noche soy una y de día otra... esa es mi verdad.", autor: "Fiona" },
+            { texto: "No estoy loco, ¡solo soy un ogro que busca tranquilidad!", autor: "Shrek" },
+            { texto: "¡Cuidado con la dragona, que tiene debilidad por los burros!", autor: "Burro" },
+            { texto: "¡Bienvenidos a Duloc, un lugar perfecto!", autor: "Lord Farquaad" }
+        ];
 
-    <!-- IZQUIERDA: CARTEL -->
-    <div class="info-cartel">
-        <img src="./fotos/mipantano.png" alt="Cartel Mi Pantano">
-    </div>
+        // 2. Función tradicional para elegir una frase al azar y mostrarla en pantalla
+        function mostrarFraseAleatoria() {
+            // Generamos un número entero aleatorio entre 0 y el total de frases menos 1
+            var posicionAleatoria = Math.floor(Math.random() * frasesDelPantano.length);
 
-    <!-- CENTRO: REDES SOCIALES -->
-    <div class="info-redes">
-        <h2>¡SEGUINOS EN EL PANTANO!</h2>
+            // Guardamos el objeto correspondiente en una variable
+            var fraseElegida = frasesDelPantano[posicionAleatoria];
 
-        <div class="redes-playroom">
+            // Comprobamos el resultado en la consola del navegador
+            console.log("Frase seleccionada:", fraseElegida.texto);
 
-            <a href="https://www.instagram.com/dreamworks/" target="_blank">
-                <img src="./fotos/instagram.png" alt="Instagram">
-            </a>
+            // Modificamos el texto y autor en el HTML mediante innerHTML
+            document.getElementById("texto-frase").innerHTML = '"' + fraseElegida.texto + '"';
+            document.getElementById("autor-frase").innerHTML = "— " + fraseElegida.autor;
+        }
 
-            <a href="https://www.facebook.com/DreamWorksAnimation/" target="_blank">
-                <img src="./fotos/facebook.png" alt="Facebook">
-            </a>
+        // 3. Función para abrir y cerrar el menú de navegación en celulares
+        function alternarMenu() {
+            var menu = document.getElementById("menu-navegacion");
 
-            <a href="https://wa.me/5491161159802" target="_blank">
-                <img src="./fotos/whatsapp.png" alt="WhatsApp">
-            </a>
+            // Condicional if / else para cambiar la clase del menú
+            if (menu.className === "abierto") {
+                menu.className = "";
+            } else {
+                menu.className = "abierto";
+            }
 
-            <a href="https://www.tiktok.com/@dreamworks" target="_blank">
-                <img src="./fotos/tiktok.png" alt="TikTok">
-            </a>
-
-        </div>
-    </div>
-
-    <!-- DERECHA: INFORMACIÓN -->
-    <div class="info-datos">
-        <h2>¡TE ESPERAMOS!</h2>
-        <p>📍 San Fernando, Buenos Aires</p>
-        <p>🕒 Martes a domingos, de 12 a 22 h</p>
-        <p>🍽️ ¡Vení a vivir una experiencia de cuento!</p>
-    </div>
-
-</footer>
-  </body>
+            console.log("Estado del menú:", menu.className);
+        }
+    </script>
+</body>
 </html>

@@ -1,989 +1,616 @@
-@import url('https://fonts.googleapis.com/css2?family=Metamorphous&display=swap');
-body {
-    background-color:#f0eee8;
-    font-family: 'Metamorphous', cursive;
-    text-align:center;
-}
-header {
-    background-color: #4F772D;
+/* ==============================================================
+   MI PANTANO - RESTAURANTE TEMÁTICO INSPIRADO EN SHREK
+   Hoja de estilos optimizada y unificada
+   Tipografías: Metamorphous (títulos) y Rubik (textos)
+   ============================================================== */
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 70px;
+@import url('https://fonts.googleapis.com/css2?family=Metamorphous&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* --------------------------------------------------------------
+   1. VARIABLES Y RESET GENERAL
+   -------------------------------------------------------------- */
+:root {
+    --color-pantano-oscuro: #2b4317;
+    --color-pantano-verde: #4F772D;
+    --color-pantano-claro: #739e42;
+    --color-oro: #c18e0d;
+    --color-oro-brillante: #ffd875;
+    --color-fondo-crema: #f7f5ee;
+    --color-fondo-tarjeta: #ffffff;
+    --color-fondo-suave: #ede7d5;
+    --color-borde-suave: #dcd3bd;
+    --color-texto-principal: #2d2618;
+    --color-texto-secundario: #5c523d;
+    --color-madera: #5c3d1e;
 }
-ul {display: flex;
-    list-style:none;
-  justify-content:center; 
+
+* {
+    box-sizing: border-box;
 }
-li {
-    margin: 15px;
-    margin-top: 30px;
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-fondo-crema);
+    font-family: 'Rubik', sans-serif;
+    color: var(--color-texto-principal);
+    text-align: center;
+    line-height: 1.6;
 }
+
+/* Tipografía de títulos temáticos */
+h1, h2, h3, h4, h5, h6,
+.logo,
+.titulo-inicio,
+.titulo-fiona,
+.boton-pantano,
+.boton-formulario,
+.boton-frase,
+.boton-chat-directo {
+    font-family: 'Metamorphous', cursive;
+    letter-spacing: 0.5px;
+}
+
 a {
     text-decoration: none;
-    color: #F4E7C5;
-    transition: color 0.3s ease, border-color 0.3s ease;
-}
-nav a {
-    padding-bottom: 4px;
-    border-bottom: 2px solid transparent;
-}
-nav a:hover {
-    color: #ffd875;
-    border-bottom-color: #ffd875;
-}
-.logo {
-    font-size: 60px;
-    color: #b37f0e;
-}
-h1 {
-    font-size: 25px;
-    color: #c18e0d;
-}
-h2 {
-    font-size: 60px;
-    color: #c18e0d;
-}
-p {
-    font-size: 15px;
-    color: #c18e0d;
-}
-.principal {
-    padding-top: 30px;
-    display: flex;
-        justify-content: space-around;
- align-items: center;
-    padding-left: 40px;
-    padding-right: 40px;
-padding-bottom: 30px;
-box-sizing: border-box;
-}
-.boton {
-    background-color: #c18e0d;
-    padding: 10px 20px;
-     color: #F4E7C5;
-     text-decoration: none;
-     border-radius: 10px;
-     display: inline-block;
-font-size: 14px;
-font-weight: bold;
-}
-.imagen-principal {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-        background-color: #d9d9d9;
-        margin: 20px auto;
-        display: flex;
-justify-content: center;
-align-items: center;
-border-radius: 20px;
-margin-left: 30px;
-overflow: hidden;
-
-}
-.texto-principal {
-    width: 40%;
-    text-align: left;
-
-}
-.lista-categorias {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px 40px;
-    box-sizing: border-box;
-    align-items: flex-start;
-
-}
-.foto-categoria {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-margin: 0 auto;
-box-sizing: border-box;
-}
-.foto-categoria img {
-    justify-content: center;
-     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    color: inherit;
+    transition: all 0.3s ease;
 }
 
-.categoria {
-    text-align: center;
-    width: 22%;
-    color: #4F772D;
-     padding-top: 10px;
-    padding-bottom: 20px;
-}
-.categoria h3 {
-    margin-top: 15px;
-}
-.footer {
-    background-color: #4F772D;
-    padding: 30px;
-}
-footer p {
-    color: #F4E7C5;
-    text-align: center;
-    font-size: 26px;
-}
-@media screen and (max-width: 992px) {
-    .principal {
-        flex-direction: column;
-    }
-    .texto-principal {
-        width: 90%;
-        text-align: center;
-    }
-    .imagen-principal {
-        width: 90%;
-        max-width: 450px;
-    }
-    .lista-categorias {
-        flex-wrap: wrap;
-    }
-    .foto-categoria {
-        width: 90%;
-        max-width: 450px;
-    }
-    .categoria {
-        width: 45%;
-    }
-    .menu-general .plato {
-        flex: 0 0 45%;
-        margin-bottom: 25px;
-    }
-}
- .menu-general h2 {
-    font-size: 28px;
-}
-.menu-general img {
-    width: 250px;
-    height: auto;
-}
-.menu-general {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2px;
-    justify-content: space-around;
-}
-.menu-general h1 {
-    width: 100%;
-    text-align: center;
-}
-.menu-general .plato img {
-    width: 300px;
-    height: 300px;
+img {
     max-width: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    transition: transform 0.3s ease;
+    display: block;
 }
-.menu-general .plato {
-    flex: 0 0 22%;
-    text-align: center;
-    box-sizing: border-box;
-    transition: transform 0.3s ease;
+
+/* --------------------------------------------------------------
+   2. ENCABEZADO Y NAVEGACIÓN
+   -------------------------------------------------------------- */
+header {
+    background-color: var(--color-pantano-oscuro);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 50px;
+    border-bottom: 3px solid var(--color-oro);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 100;
 }
-.menu-general .plato:hover {
-    transform: translateY(-5px);
-}
-.menu-general .plato:hover img {
-    transform: scale(1.04);
-}
+
 .logo img {
-    width: 150px;
-    height: 150px;
+    width: 90px;
+    height: 90px;
     object-fit: cover;
     border-radius: 50%;
+    border: 3px solid var(--color-oro);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
 }
-.menu-general .plato h2 {
-    font-size: 30px;
+
+.logo img:hover {
+    transform: rotate(5deg) scale(1.05);
 }
 
-.menu-general .plato p {
-    font-size: 17px;
-}
-/* PANTANO PLAYROOM */
-
-/* CONTENEDOR GENERAL */
-
-.pagina-playroom {
-    padding: 25px;
-background-color: #f1f0ed;}
-
-/* PRIMERA SECCIÓN */
-
-.presentacion-playroom {
+nav ul {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    padding: 25px;
-    background-color: transparent;
-}
-
-.texto-playroom {
-    width: 100%;
-    text-align: center;
-}
-
-.texto-playroom h1 {
-    font-size: 30px;
-    color: #4f772d;
-    text-align: center;
-    width: 100%;
-}
-
-.texto-playroom p {
-    font-size: 20px;
-}
-
-.fotos-pequenas {
-    display: flex;
-    justify-content: center;
-        flex-wrap: wrap;
-    gap: 60px;
-}
-
-.fotos-pequenas img {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-.imagen-playroom {
-    width: 40%;
-}
-
-.imagen-playroom img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 15px;
-}
-
-.frase-playroom {
-    width: 25%;
-    text-align: center;
-}
-
-.frase-playroom h2 {
-    font-size: 22px;
-    color: #4f772d;
-}
-
-.frase-playroom img {
-    width: 80%;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-/* SEGUNDA SECCIÓN: TARJETAS */
-
-.actividades-playroom {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    margin-top: 25px;
-}
-
-.tarjeta-playroom {
-    width: 25%;
-    background-color: #e8dfc5;
-    padding: 20px;
-    text-align: center;
-    border-radius: 12px;
-}
-
-.icono-playroom {
-    font-size: 32px;
-    margin-bottom: 10px;
-}
-
-.tarjeta-playroom h3 {
-    font-size: 17px;
-    color: #4f772d;
-}
-
-.tarjeta-playroom p {
-    font-size: 14px;
-}
-
-/* TERCERA SECCIÓN: INFORMACIÓN */
-
-.informacion-playroom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
     gap: 25px;
-    margin-top: 35px;
-    padding: 20px;
+    align-items: center;
 }
 
-.ambiente-playroom {
-    width: 30%;
+nav li {
+    margin: 0;
 }
 
-.ambiente-playroom img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 12px;
+nav a {
+    color: #f7f3e8;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
 }
 
-.mensaje-playroom {
-    width: 35%;
-    text-align: center;
+nav a:hover {
+    color: var(--color-oro-brillante);
+    border-bottom-color: var(--color-oro-brillante);
+    background-color: rgba(255, 255, 255, 0.06);
 }
 
-.mensaje-playroom h2 {
-    font-size: 25px;
-    color: #4f772d;
-}
-
-.redes-playroom {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 25px;
-    font-size: 13px;
-}
-.redes-playroom a {
-    color: #4f772d;
-    font-size: 20px;
-    text-decoration: none;
-}
-.redes-playroom img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-.datos-playroom {
-    width: 30%;
-}
-
-.datos-playroom h3 {
-    font-size: 17px;
-    color: #4f772d;
-    margin-bottom: 5px;
-}
-
-.datos-playroom p {
-    font-size: 14px;
-    margin-bottom: 15px;
-}
-
-/* EFECTO AL PASAR EL MOUSE */
-
-.tarjeta-playroom:hover {
-    background-color: #d5e3b5;
-    transform: scale(1.03);
-}
-
-/* DISEÑO RESPONSIVE: TABLET */
-
-@media screen and (max-width: 992px) {
-
-    .presentacion-playroom {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .texto-playroom,
-    .imagen-playroom,
-    .frase-playroom {
-        width: 45%;
-    }
-
-    .actividades-playroom {
-        flex-wrap: wrap;
-    }
-
-    .tarjeta-playroom {
-        width: 45%;
-        box-sizing: border-box;
-    }
-
-    .informacion-playroom {
-        flex-wrap: wrap;
-    }
-
-    .ambiente-playroom,
-    .mensaje-playroom,
-    .datos-playroom {
-        width: 45%;
-    }
-}
-
-/* DISEÑO RESPONSIVE: CELULAR */
-
-@media screen and (max-width: 600px) {
-
-    .presentacion-playroom,
-    .actividades-playroom,
-    .informacion-playroom {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .texto-playroom,
-    .imagen-playroom,
-    .frase-playroom,
-    .tarjeta-playroom,
-    .ambiente-playroom,
-    .mensaje-playroom,
-    .datos-playroom {
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .texto-playroom h1 {
-        font-size: 28px;
-    }
-
-    .imagen-playroom img {
-        height: 200px;
-    }
-
-    .mensaje-playroom h2 {
-        font-size: 22px;
-    }
-}
-@media screen and (max-width: 600px) {
-    .presentacion-playroom {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .presentacion-playroom .texto-playroom,
-    .presentacion-playroom .imagen-playroom,
-    .presentacion-playroom .frase-playroom {
-        width: 100%;
-    }
-}
 .menu-hamburguesa {
     display: none;
-    background-color: transparent;
-    border: none;
-    color: white;
-    font-size: 40px;
+    background: transparent;
+    border: 2px solid var(--color-oro);
+    color: var(--color-oro-brillante);
+    font-size: 26px;
+    padding: 6px 14px;
+    border-radius: 8px;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
-@media (max-width: 768px) {
-    header {
-        flex-wrap: wrap;
-        padding: 10px 25px;
-    }
 
-    .menu-hamburguesa {
-        display: block;
-    }
-
-    nav {
-        display: none;
-    }
-
-    nav.abierto {
-        display: block;
-        width: 100%;
-        margin-top: 15px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        padding: 0;
-        margin: 0;
-    }
-
-    nav li {
-        margin: 10px 0;
-    }
-
-    .presentacion-playroom {
-        flex-direction: column;
-    }
-}/* AJUSTES FINALES PANTANO PLAYROOM - CELULAR */
-
-@media screen and (max-width: 600px) {
-
-    .pagina-playroom {
-        padding: 10px;
-    }
-
-    .presentacion-playroom {
-        padding: 15px;
-        text-align: center;
-    }
-
-    .fotos-pequenas {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .fotos-pequenas img {
-        width: 90px;
-        height: 90px;
-        border-radius: 50%;
-        object-fit: cover;
-    }
-
-    .actividades-playroom {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-
-    .tarjeta-playroom {
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .informacion-playroom {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 20px;
-    }
-
-    .ambiente-playroom img {
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-    }
-
-    .redes-playroom {
-        justify-content: center;
-    }
+.menu-hamburguesa:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
-/* FOTOS DEL PLAYROOM EN CELULAR */
 
-@media screen and (max-width: 600px) {
-
-   .fotos-pequenas {
+/* --------------------------------------------------------------
+   3. SECCIÓN HERO (BIENVENIDA CON LA CASA DE SHREK)
+   -------------------------------------------------------------- */
+.principal.hero-inicio {
+    background: linear-gradient(rgba(20, 35, 10, 0.72), rgba(20, 35, 10, 0.72)),
+                url('./fotos/casa-shrek.jpg') center/cover no-repeat;
+    background-color: #2b4317; /* Fallback si no está la foto */
+    min-height: 380px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 20px;
-} 
+    padding: 70px 20px;
+    border-bottom: 4px solid var(--color-oro);
+    box-shadow: inset 0 -10px 20px rgba(0, 0, 0, 0.3);
+}
 
-    .fotos-pequenas img {
-        width: 300px;
-        height: 300px;
-        max-width: 100%;
-        border-radius: 50%;
-        object-fit: cover;
-    }
-
-}/* INICIO: CARTEL PRINCIPAL */
-
-.cartel-inicio {
-    display: block;
-    width: 100%;
-    max-width: 650px;
-    height: auto;
+.hero-contenido {
+    max-width: 850px;
     margin: 0 auto;
 }
 
-.principal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.hero-inicio h1.titulo-inicio {
+    font-size: 42px;
+    color: #fce8b8;
+    margin: 0 0 15px 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    line-height: 1.2;
 }
 
-/* INICIO: DISEÑO PARA CELULARES */
-
-@media screen and (max-width: 600px) {
-
-    .principal {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .lista-categorias {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 40px;
-    }
-
-    .categoria {
-        width: 100%;
-        text-align: center;
-    }
-
-    .foto-categoria img {
-        width: 300px;
-        height: 300px;
-        max-width: 100%;
-        border-radius: 50%;
-        object-fit: cover;
-    }
-
-}/* CARTEL Y BOTÓN DE INICIO */
-
-.principal {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
+.hero-inicio .subtitulo-hero {
+    font-size: 20px;
+    color: #f7f1e1;
+    margin: 0 0 30px 0;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+    font-weight: 300;
 }
 
-.principal .texto-principal {
-    width: auto;
-    flex: 0 1 650px;
-}
-
-.cartel-inicio {
-    display: block;
-    width: 100%;
-    max-width: 650px;
-    height: auto;
+.boton-pantano {
+    background-color: var(--color-oro);
+    color: #1a290e;
+    padding: 14px 32px;
     border-radius: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    display: inline-block;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
 }
 
-.boton-inicio {
-    flex-shrink: 0;
-    white-space: nowrap;
+.boton-pantano:hover {
+    background-color: #dda516;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.4);
+    color: #121c0a;
 }
 
-/* INICIO EN CELULARES */
-
-@media screen and (max-width: 768px) {
-
-    .principal {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
-
-    .principal .texto-principal {
-        width: 100%;
-        flex: none;
-    }
-
-    .cartel-inicio {
-        max-width: 100%;
-        border-radius: 20px;
-    }
-
-    .boton-inicio {
-        margin: 0 auto;
-    }
-}
-/* REDES SOCIALES EN EL FOOTER */
-
-.footer .redes-playroom {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-top: 20px;
+/* --------------------------------------------------------------
+   4. CATEGORÍAS DE PERSONAJES (ELEMENTOS DECORATIVOS ARMONIOSOS)
+   -------------------------------------------------------------- */
+.categorias {
+    padding: 55px 25px 35px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-.footer .redes-playroom img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-    transition: transform 0.3s;
+.categorias-titulo {
+    font-size: 30px;
+    color: var(--color-pantano-oscuro);
+    margin: 0 0 10px 0;
 }
 
-.footer .redes-playroom img:hover {
-    transform: scale(1.15);
-}/* SECCIÓN INFERIOR DE INICIO */
-
-.info-inicio {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 30px;
-    padding: 40px 25px;
-    background-color: #4f772d;
-    color: #f4e7c5;
-}
-
-/* TRES COLUMNAS */
-
-.info-cartel,
-.info-redes,
-.info-datos {
-    flex: 1;
-    text-align: center;
-    min-width: 0;
-}
-
-/* CARTEL */
-
-.info-cartel img {
-    width: 100%;
-    max-width: 450px;
-    height: auto;
-    border-radius: 20px;
-}
-
-/* TÍTULOS */
-
-.info-inicio h2 {
-    font-size: 22px;
-    margin-bottom: 20px;
-    color: #f4e7c5;
-}
-
-/* REDES SOCIALES */
-
-.info-redes .redes-playroom {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.info-redes .redes-playroom img {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-/* INFORMACIÓN */
-
-.info-datos p {
+.categorias-subtitulo {
     font-size: 16px;
-    margin-bottom: 15px;
-    color: #f4e7c5;
+    color: var(--color-texto-secundario);
+    margin: 0 0 40px 0;
 }
 
-/* DISEÑO RESPONSIVE */
-
-@media screen and (max-width: 768px) {
-
-    .info-inicio {
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-        padding: 30px 20px;
-    }
-
-    .info-cartel,
-    .info-redes,
-    .info-datos {
-        width: 100%;
-        flex: none;
-    }
-
-    .info-cartel img {
-        max-width: 250px;
-    }
+.lista-categorias {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
 }
-/* ENLACES DE LAS CATEGORÍAS */
+
+.categoria {
+    flex: 0 1 220px;
+    background-color: var(--color-fondo-tarjeta);
+    border: 2px solid var(--color-borde-suave);
+    border-radius: 18px;
+    padding: 22px 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.categoria:hover {
+    transform: translateY(-6px);
+    border-color: var(--color-pantano-verde);
+    box-shadow: 0 10px 25px rgba(79, 119, 45, 0.18);
+}
 
 .enlace-categoria {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-decoration: none;
-    color: inherit;
     width: 100%;
+}
+
+/* Personajes más pequeños, decorativos y proporcionados */
+.foto-categoria {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #f5efe1 45%, #e2d6bc 100%);
+    border: 3px solid var(--color-oro);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 15px;
     transition: transform 0.3s ease;
 }
 
-.enlace-categoria:hover {
-    transform: translateY(-8px);
+.foto-categoria img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.categoria:hover .foto-categoria {
+    border-color: var(--color-pantano-verde);
+}
+
+.categoria:hover .foto-categoria img {
+    transform: scale(1.12);
 }
 
 .enlace-categoria h3 {
-    color: #4f772d;
-    text-align: center;
+    font-size: 14px;
+    color: var(--color-pantano-oscuro);
+    margin: 0;
+    line-height: 1.3;
     transition: color 0.3s ease;
 }
 
-.enlace-categoria:visited h3 {
-    color: #4f772d;
+.categoria:hover .enlace-categoria h3 {
+    color: var(--color-oro);
 }
 
-.enlace-categoria:hover h3 {
-    color: #c58d08;
+/* --------------------------------------------------------------
+   5. SECCIÓN INTERACTIVA DE JAVASCRIPT: FRASES DEL PANTANO
+   -------------------------------------------------------------- */
+.seccion-frases {
+    padding: 20px 20px 65px;
+    max-width: 780px;
+    margin: 0 auto;
 }
 
-.foto-categoria img {
-    transition: transform 0.4s ease;
+.caja-frase-pantano {
+    background: linear-gradient(145deg, #ede7d5, #e0d5be);
+    border: 2px solid #cfc2a3;
+    border-radius: 20px;
+    padding: 35px 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
-.enlace-categoria:hover .foto-categoria img {
-    transform: scale(1.06);
-}/* TÍTULO DE FIONA */
+.decoracion-ogro {
+    font-size: 40px;
+    margin-bottom: 5px;
+}
 
+.caja-frase-pantano h2 {
+    font-size: 24px;
+    color: var(--color-pantano-oscuro);
+    margin: 0 0 10px 0;
+}
+
+.frase-subtitulo {
+    font-size: 15px;
+    color: var(--color-texto-secundario);
+    margin: 0 0 25px 0;
+}
+
+.globo-frase {
+    background-color: #ffffff;
+    border-left: 5px solid var(--color-pantano-verde);
+    border-radius: 12px;
+    padding: 22px 25px;
+    margin: 0 auto 25px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    min-height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#texto-frase {
+    font-size: 18px;
+    font-style: italic;
+    color: var(--color-pantano-oscuro);
+    margin: 0 0 8px 0;
+    line-height: 1.4;
+}
+
+#autor-frase {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-oro);
+    text-align: right;
+    display: block;
+}
+
+.boton-frase {
+    background-color: var(--color-pantano-verde);
+    color: #f7f3e8;
+    border: none;
+    padding: 13px 28px;
+    border-radius: 25px;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(79, 119, 45, 0.3);
+    transition: all 0.3s ease;
+}
+
+.boton-frase:hover {
+    background-color: var(--color-pantano-oscuro);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(43, 67, 23, 0.4);
+}
+
+/* --------------------------------------------------------------
+   6. MENÚ GENERAL Y PÁGINAS DE PERSONAJES (TARJETAS CONSISTENTES)
+   -------------------------------------------------------------- */
 .titulo-fiona {
+    font-size: 34px;
+    color: var(--color-pantano-oscuro);
+    margin: 35px 20px 25px;
+    text-transform: uppercase;
     width: 100%;
+}
+
+.menu-general {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    padding: 20px 20px 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-general .plato {
+    flex: 0 1 260px;
+    background-color: var(--color-fondo-tarjeta);
+    border: 1px solid var(--color-borde-suave);
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.menu-general .plato:hover {
+    transform: translateY(-6px);
+    border-color: var(--color-pantano-verde);
+    box-shadow: 0 10px 25px rgba(79, 119, 45, 0.18);
+}
+
+.menu-general .plato img {
+    order: -1;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid var(--color-fondo-suave);
+    margin-bottom: 12px;
+    transition: transform 0.3s ease;
+}
+
+.menu-general .plato:hover img {
+    transform: scale(1.03);
+}
+
+.menu-general .plato h2 {
+    font-size: 18px;
+    color: var(--color-pantano-oscuro);
+    margin: 0 0 8px 0;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-general .plato p {
+    font-size: 14px;
+    color: var(--color-texto-secundario);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* --------------------------------------------------------------
+   7. PANTANO PLAYROOM
+   -------------------------------------------------------------- */
+.pagina-playroom {
+    padding: 30px 20px 60px;
+    background-color: var(--color-fondo-crema);
+}
+
+.presentacion-playroom {
+    max-width: 950px;
+    margin: 0 auto 40px;
     text-align: center;
-    font-size: 36px;
-    color: #4f772d;
-    margin: 30px 0 40px;
 }
 
-/* FOOTER DE FIONA */
-
-.footer-fiona {
-    background-color: #4f772d;
-    padding: 35px 20px;
-    text-align: center;
+.texto-playroom h1 {
+    font-size: 32px;
+    color: var(--color-pantano-oscuro);
+    margin: 0 0 15px 0;
 }
 
-.footer-fiona h2 {
-    color: #f4e7c5;
-    font-size: 22px;
-    margin-bottom: 20px;
+.texto-playroom p {
+    font-size: 17px;
+    color: var(--color-texto-secundario);
+    margin: 0 0 30px 0;
 }
 
-.footer-fiona .redes-playroom {
+.fotos-pequenas {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 15px;
+    flex-wrap: wrap;
+    gap: 25px;
 }
 
-.footer-fiona .redes-playroom img {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
+.fotos-pequenas img {
+    width: 260px;
+    height: 180px;
+    border-radius: 14px;
     object-fit: cover;
+    border: 3px solid var(--color-borde-suave);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
 }
 
-/* ADAPTACIÓN A CELULARES */
+.fotos-pequenas img:hover {
+    transform: scale(1.05);
+}
 
-@media screen and (max-width: 600px) {
+.actividades-playroom {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    max-width: 1050px;
+    margin: 0 auto;
+}
 
-    .titulo-fiona {
-        font-size: 28px;
-    }
-
-    .footer-fiona .redes-playroom {
-        flex-wrap: wrap;
-    }
-}/* TÍTULO PRINCIPAL DE INICIO */
-.titulo-inicio {
-    font-size: 40px;
+.tarjeta-playroom {
+    flex: 0 1 300px;
+    background-color: var(--color-fondo-suave);
+    border: 2px solid var(--color-borde-suave);
+    padding: 30px 20px;
     text-align: center;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
 }
 
-/* TÍTULO EN CELULARES */
-@media screen and (max-width: 600px) {
-    .titulo-inicio {
-        font-size: 32px;
-    }
+.tarjeta-playroom:hover {
+    background-color: #dfd7be;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
 
-}/* Separación entre las tarjetas y el footer de Playroom */
+.icono-playroom {
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.tarjeta-playroom h3 {
+    font-size: 18px;
+    color: var(--color-pantano-oscuro);
+    margin: 0 0 10px 0;
+}
+
+.tarjeta-playroom p {
+    font-size: 14px;
+    color: var(--color-texto-secundario);
+    margin: 0;
+}
+
 .separacion-playroom {
-    margin-top: 40px;
-  }  
-/* Ajuste exclusivo de Sabores Picantes */
-.foto-categoria img[alt="Sabores Picantes"] {
-    object-fit: contain;
-    object-position: center;
+    margin-top: 50px;
 }
 
-/* =========================================
-   ESTILOS PARA RESERVAS Y CONTACTO
-   ========================================= */
-
+/* --------------------------------------------------------------
+   8. FORMULARIOS DE RESERVAS Y CONTACTO
+   -------------------------------------------------------------- */
 .pagina-reservas,
 .pagina-contacto {
-    padding: 20px 15px 50px;
-    background-color: #f0eee8;
-    min-height: 70vh;
+    padding: 30px 20px 60px;
+    background-color: var(--color-fondo-crema);
 }
 
 .seccion-formulario {
-    max-width: 1100px;
+    max-width: 1050px;
     margin: 0 auto;
 }
 
 .subtitulo-seccion {
-    font-size: 18px;
-    color: #4F772D;
-    margin-top: -20px;
+    font-size: 16px;
+    color: var(--color-pantano-verde);
+    margin-top: -15px;
     margin-bottom: 35px;
     text-align: center;
 }
 
-/* CONTENEDOR DE FORMULARIO */
 .contenedor-formulario {
-    background-color: #e8dfc5;
+    background-color: var(--color-fondo-suave);
     border-radius: 18px;
-    padding: 35px 40px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-    border: 2px solid #d9cca8;
+    padding: 35px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+    border: 2px solid var(--color-borde-suave);
     text-align: left;
-    box-sizing: border-box;
 }
 
 .pagina-reservas .contenedor-formulario {
-    max-width: 680px;
+    max-width: 650px;
     margin: 0 auto;
 }
 
 .contenedor-formulario h2 {
-    font-size: 24px;
-    color: #4F772D;
-    margin-top: 0;
-    margin-bottom: 25px;
+    font-size: 22px;
+    color: var(--color-pantano-oscuro);
+    margin: 0 0 20px 0;
     text-align: center;
 }
 
-/* CAMPOS DE FORMULARIO */
 .campo-form {
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 .campo-form label {
-    font-size: 15px;
-    font-weight: bold;
-    color: #4F772D;
-    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-pantano-oscuro);
+    margin-bottom: 6px;
 }
 
 .campo-form input,
 .campo-form select,
 .campo-form textarea {
     padding: 12px 14px;
-    font-size: 15px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    color: #2b3a1a;
+    font-size: 14px;
+    font-family: 'Rubik', sans-serif;
+    color: var(--color-texto-principal);
     background-color: #ffffff;
-    border: 2px solid #c9b990;
+    border: 2px solid var(--color-borde-suave);
     border-radius: 10px;
     outline: none;
-    transition: border-color 0.3s, box-shadow 0.3s;
-    box-sizing: border-box;
+    transition: all 0.3s ease;
 }
 
 .campo-form input:focus,
 .campo-form select:focus,
 .campo-form textarea:focus {
-    border-color: #4F772D;
+    border-color: var(--color-pantano-verde);
     box-shadow: 0 0 8px rgba(79, 119, 45, 0.25);
-}
-
-.campo-form textarea {
-    resize: vertical;
-    min-height: 85px;
 }
 
 .fila-campos {
@@ -995,41 +622,36 @@ background-color: #f1f0ed;}
     flex: 1;
 }
 
-/* BOTONES DE FORMULARIO */
 .boton-formulario {
     width: 100%;
-    background-color: #4F772D;
-    color: #F4E7C5;
+    background-color: var(--color-pantano-verde);
+    color: #f7f3e8;
     border: none;
-    padding: 15px 25px;
-    font-size: 18px;
-    font-family: 'Metamorphous', cursive;
+    padding: 14px 20px;
+    font-size: 16px;
     border-radius: 12px;
     cursor: pointer;
     margin-top: 10px;
     box-shadow: 0 4px 12px rgba(79, 119, 45, 0.3);
-    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    transition: all 0.3s ease;
 }
 
 .boton-formulario:hover {
-    background-color: #3b5a22;
+    background-color: var(--color-pantano-oscuro);
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(79, 119, 45, 0.4);
+    box-shadow: 0 6px 16px rgba(43, 67, 23, 0.4);
 }
 
 .aclaracion-form {
-    font-size: 13px;
-    color: #635b46;
+    font-size: 12px;
+    color: var(--color-texto-secundario);
     text-align: center;
-    margin-top: 12px;
-    margin-bottom: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin: 10px 0 0;
 }
 
-/* PÁGINA CONTACTO: ESTRUCTURA 2 COLUMNAS */
 .contacto-contenedor {
     display: flex;
-    gap: 35px;
+    gap: 30px;
     align-items: stretch;
     justify-content: center;
 }
@@ -1040,40 +662,37 @@ background-color: #f1f0ed;}
 
 .contacto-tarjeta-info {
     flex: 0.9;
-    background-color: #e8dfc5;
+    background-color: var(--color-fondo-suave);
     border-radius: 18px;
-    padding: 35px 30px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-    border: 2px solid #d9cca8;
+    padding: 30px 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+    border: 2px solid var(--color-borde-suave);
     text-align: center;
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .contacto-tarjeta-info h2 {
-    font-size: 24px;
-    color: #4F772D;
-    margin-top: 0;
-    margin-bottom: 15px;
+    font-size: 22px;
+    color: var(--color-pantano-oscuro);
+    margin: 0 0 15px 0;
 }
 
 .contacto-foto-olla {
-    width: 130px;
-    height: 130px;
-    margin: 0 auto 20px;
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 15px;
     border-radius: 50%;
-    background-color: #d9cca8;
+    background-color: #ded5bf;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    box-shadow: inset 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .contacto-foto-olla img {
-    width: 85%;
+    width: 80%;
     height: auto;
     object-fit: contain;
 }
@@ -1082,58 +701,173 @@ background-color: #f1f0ed;}
     display: flex;
     align-items: flex-start;
     text-align: left;
-    gap: 15px;
-    margin-bottom: 20px;
+    gap: 12px;
+    margin-bottom: 15px;
 }
 
 .contacto-icono {
-    font-size: 26px;
-    line-height: 1;
+    font-size: 22px;
 }
 
 .contacto-item h3 {
-    margin: 0 0 4px 0;
-    font-size: 16px;
-    color: #4F772D;
+    margin: 0 0 2px 0;
+    font-size: 15px;
+    color: var(--color-pantano-oscuro);
 }
 
 .contacto-item p {
     margin: 0;
-    font-size: 14px;
-    color: #4a4433;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 13px;
+    color: var(--color-texto-secundario);
 }
 
 .nota-lunes {
     font-style: italic;
-    color: #8c7f5f !important;
+    color: #7d7259 !important;
     font-size: 12px !important;
-    margin-top: 3px !important;
 }
 
 .boton-chat-directo {
     display: block;
-    background-color: #c18e0d;
-    color: #F4E7C5;
-    text-decoration: none;
-    padding: 13px 20px;
-    font-size: 16px;
-    font-family: 'Metamorphous', cursive;
-    border-radius: 12px;
+    background-color: var(--color-oro);
+    color: #1a290e;
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 10px;
     margin-top: 15px;
-    transition: background-color 0.3s, transform 0.2s;
-    box-shadow: 0 4px 12px rgba(193, 142, 13, 0.3);
+    transition: all 0.3s ease;
 }
 
 .boton-chat-directo:hover {
-    background-color: #a87907;
+    background-color: #dda516;
     transform: translateY(-2px);
 }
 
-/* RESPONSIVE PARA RESERVAS Y CONTACTO */
-@media screen and (max-width: 768px) {
+/* --------------------------------------------------------------
+   9. PIE DE PÁGINA (FOOTER)
+   -------------------------------------------------------------- */
+.info-inicio {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    padding: 40px 30px;
+    background-color: var(--color-pantano-oscuro);
+    color: #f7f3e8;
+    border-top: 3px solid var(--color-oro);
+}
+
+.info-cartel,
+.info-redes,
+.info-datos {
+    flex: 1;
+    text-align: center;
+}
+
+.info-cartel img {
+    max-width: 320px;
+    height: auto;
+    border-radius: 14px;
+    margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.info-inicio h2 {
+    font-size: 20px;
+    margin: 0 0 15px 0;
+    color: var(--color-oro-brillante);
+}
+
+.info-redes .redes-playroom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.info-redes .redes-playroom img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.info-redes .redes-playroom img:hover {
+    transform: scale(1.15) rotate(5deg);
+}
+
+.info-datos p {
+    font-size: 14px;
+    margin: 0 0 10px 0;
+    color: #eae3d2;
+}
+
+/* --------------------------------------------------------------
+   10. DISEÑO RESPONSIVE (TABLETS Y CELULARES)
+   -------------------------------------------------------------- */
+@media screen and (max-width: 992px) {
+    header {
+        padding: 12px 30px;
+    }
+
+    .hero-inicio h1.titulo-inicio {
+        font-size: 34px;
+    }
+
+    .menu-general .plato {
+        flex: 0 1 45%;
+    }
+
     .contacto-contenedor {
         flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+        padding: 12px 20px;
+    }
+
+    .menu-hamburguesa {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+    }
+
+    nav.abierto {
+        display: block;
+        margin-top: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px 0 5px;
+    }
+
+    nav a {
+        display: block;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .hero-inicio h1.titulo-inicio {
+        font-size: 28px;
+    }
+
+    .hero-inicio .subtitulo-hero {
+        font-size: 16px;
+    }
+
+    .categoria {
+        flex: 0 1 45%;
     }
 
     .fila-campos {
@@ -1141,17 +875,32 @@ background-color: #f1f0ed;}
         gap: 0;
     }
 
-    .contenedor-formulario,
-    .contacto-tarjeta-info {
-        padding: 25px 20px;
+    .info-inicio {
+        flex-direction: column;
+        gap: 30px;
+        padding: 35px 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-inicio h1.titulo-inicio {
+        font-size: 24px;
     }
 
-    .subtitulo-seccion {
-        font-size: 16px;
-        padding: 0 10px;
+    .categoria {
+        flex: 0 1 100%;
+        max-width: 280px;
     }
 
-    .boton-formulario {
+    .menu-general .plato {
+        flex: 0 1 100%;
+    }
+
+    .caja-frase-pantano {
+        padding: 25px 18px;
+    }
+
+    #texto-frase {
         font-size: 16px;
     }
 }

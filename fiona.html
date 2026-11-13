@@ -11,8 +11,8 @@
    <div class="logo">
 <img src="./fotos/logo.jpg" alt="Logo de Mi Pantano">
 </div>
-<button class="menu-hamburguesa" onclick="document.querySelector('nav').classList.toggle('abierto')">☰</button>
- <nav>
+<button type="button" class="menu-hamburguesa" onclick="alternarMenu()">☰</button>
+ <nav id="menu-navegacion">
         <ul>
     <li><a href="index.html">INICIO</a></li>
     <li><a href="menu.html">MENÚ GRAL.</a></li>
@@ -111,5 +111,16 @@
 </footer>
 
 </footer>
+
+    <script>
+        function alternarMenu() {
+            var menu = document.getElementById("menu-navegacion");
+            if (menu.className === "abierto") {
+                menu.className = "";
+            } else {
+                menu.className = "abierto";
+            }
+        }
+    </script>
 </body>
 </html>

@@ -11,8 +11,8 @@
         <div class="logo">
             <img src="./fotos/logo.jpg" alt="Logo de Mi Pantano">
         </div>
-        <button class="menu-hamburguesa" onclick="document.querySelector('nav').classList.toggle('abierto')">☰</button>
-        <nav>
+        <button class="menu-hamburguesa" onclick="alternarMenu()">☰</button>
+        <nav id="menu-navegacion">
             <ul>
                 <li><a href="index.html">INICIO</a></li>
                 <li><a href="menu.html">MENÚ GRAL.</a></li>
@@ -97,7 +97,7 @@
                         <textarea id="res-mensaje" name="mensaje" rows="3" placeholder="¿Festejo de cumpleaños, menú celíaco/vegano, sillita para niños?"></textarea>
                     </div>
 
-                    <button type="submit" class="boton-formulario">
+                    <button type="button" class="boton-formulario" onclick="enviarReserva()">
                         🏰 Confirmar Reserva por WhatsApp
                     </button>
                     <p class="aclaracion-form">Se abrirá WhatsApp con los datos de tu reserva listos para enviar directo a nuestro celular.</p>
@@ -141,17 +141,25 @@
     </footer>
 
     <script>
-        document.getElementById('form-reservas').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const nombre = document.getElementById('res-nombre').value;
-            const tel = document.getElementById('res-telefono').value;
-            const fecha = document.getElementById('res-fecha').value;
-            const hora = document.getElementById('res-hora').value;
-            const personas = document.getElementById('res-personas').value;
-            const sector = document.getElementById('res-sector').value;
-            const mensaje = document.getElementById('res-mensaje').value;
+        // Función tradicional para procesar y enviar la reserva por WhatsApp
+        function enviarReserva() {
+            // Variables para obtener los valores ingresados por el usuario
+            var nombre = document.getElementById("res-nombre").value;
+            var tel = document.getElementById("res-telefono").value;
+            var fecha = document.getElementById("res-fecha").value;
+            var hora = document.getElementById("res-hora").value;
+            var personas = document.getElementById("res-personas").value;
+            var sector = document.getElementById("res-sector").value;
+            var mensaje = document.getElementById("res-mensaje").value;
 
-            let texto = "¡Hola Mi Pantano! 🧌 Quisiera hacer una reserva:%0A%0A" +
+            // Validación con condicional if para comprobar campos obligatorios
+            if (nombre === "" || tel === "" || fecha === "" || hora === "") {
+                alert("Por favor completá tu nombre, teléfono, fecha y horario para la reserva.");
+                return;
+            }
+
+            // Construcción del texto a enviar
+            var texto = "¡Hola Mi Pantano! 🧌 Quisiera hacer una reserva:%0A%0A" +
                         "• *Nombre:* " + encodeURIComponent(nombre) + "%0A" +
                         "• *Teléfono:* " + encodeURIComponent(tel) + "%0A" +
                         "• *Fecha:* " + encodeURIComponent(fecha) + "%0A" +
@@ -159,13 +167,23 @@
                         "• *Comensales:* " + encodeURIComponent(personas) + "%0A" +
                         "• *Sector:* " + encodeURIComponent(sector);
 
-            if (mensaje.trim() !== "") {
+            if (mensaje !== "") {
                 texto += "%0A• *Comentarios:* " + encodeURIComponent(mensaje);
             }
 
-            const url = "https://wa.me/5491161159802?text=" + texto;
-            window.open(url, "_blank");
-        });
+            console.log("Enviando reserva a WhatsApp para:", nombre);
+            window.open("https://wa.me/5491161159802?text=" + texto, "_blank");
+        }
+
+        // Función para abrir y cerrar el menú en celulares
+        function alternarMenu() {
+            var menu = document.getElementById("menu-navegacion");
+            if (menu.className === "abierto") {
+                menu.className = "";
+            } else {
+                menu.className = "abierto";
+            }
+        }
     </script>
 </body>
 </html>
