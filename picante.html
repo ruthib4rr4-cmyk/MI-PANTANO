@@ -25,53 +25,97 @@
 <main>
     <section class="menu-general">
         <h1 class="titulo-fiona">SABORES PICANTES</h1>
+
+        <section class="carrito" aria-labelledby="titulo-carrito">
+            <h2 id="titulo-carrito">Carrito</h2>
+            <p>Simulación de pedido. Los precios son ficticios.</p>
+            <div aria-live="polite">
+                <ul id="productos-carrito">
+                    <li>El carrito está vacío.</li>
+                </ul>
+                <p><strong>Total: <span id="total-carrito">$ 0</span></strong></p>
+            </div>
+            <button type="button" class="boton-formulario" onclick="vaciarCarrito()">Vaciar</button>
+        </section>
         
-<<div class="plato">
-    <h2>Aliento de Dragona</h2>
+<div class="plato">
+    <h2 id="plato-25">Aliento de Dragona</h2>
     <img src="./fotos/alitas.jpg" alt="Aliento de Dragona">
     <p>Alitas de pollo crocantes bañadas en salsa búfalo picante.</p>
+    <div class="pedido-plato">
+        <p><strong>$ 12.000</strong></p>
+        <button type="button" class="boton-formulario" id="agregar-25" aria-labelledby="agregar-25 plato-25" onclick="agregarProducto('plato-25', 12000)">Agregar al carrito</button>
+    </div>
 </div>
 
 <div class="plato">
-    <h2>Fuego del Pantano</h2>
+    <h2 id="plato-26">Fuego del Pantano</h2>
     <img src="./fotos/tacos.jpg" alt="Fuego del Pantano">
     <p>Tacos de carne con jalapeños, vegetales frescos y salsa picante.</p>
+    <div class="pedido-plato">
+        <p><strong>$ 14.500</strong></p>
+        <button type="button" class="boton-formulario" id="agregar-26" aria-labelledby="agregar-26 plato-26" onclick="agregarProducto('plato-26', 14500)">Agregar al carrito</button>
+    </div>
 </div>
 
 <div class="plato">
-    <h2>Besos que Queman</h2>
+    <h2 id="plato-27">Besos que Queman</h2>
     <img src="./fotos/nachos.jpg" alt="Besos que Queman">
     <p>Nachos crujientes con cheddar fundido, guacamole y chile.</p>
+    <div class="pedido-plato">
+        <p><strong>$ 10.000</strong></p>
+        <button type="button" class="boton-formulario" id="agregar-27" aria-labelledby="agregar-27 plato-27" onclick="agregarProducto('plato-27', 10000)">Agregar al carrito</button>
+    </div>
 </div>
 
 <div class="plato">
-    <h2>Lágrimas de Ogro</h2>
+    <h2 id="plato-28">Lágrimas de Ogro</h2>
     <img src="./fotos/empanadas.jpg" alt="Lágrimas de Ogro">
     <p>Empanadas de carne jugosa, condimentadas con ají y especias.</p>
+    <div class="pedido-plato">
+        <p><strong>$ 9.500</strong></p>
+        <button type="button" class="boton-formulario" id="agregar-28" aria-labelledby="agregar-28 plato-28" onclick="agregarProducto('plato-28', 9500)">Agregar al carrito</button>
+    </div>
 </div>
 
 <div class="plato">
-    <h2>Guiso Picante</h2>
+    <h2 id="plato-29">Guiso Picante</h2>
     <img src="./fotos/guiso.jpg" alt="Guiso Picante">
     <p>Guiso casero de carne, verduras y legumbres con un toque de ají picante.</p>
+    <div class="pedido-plato">
+        <p><strong>$ 16.000</strong></p>
+        <button type="button" class="boton-formulario" id="agregar-29" aria-labelledby="agregar-29 plato-29" onclick="agregarProducto('plato-29', 16000)">Agregar al carrito</button>
+    </div>
 </div>
 
 <div class="plato">
-    <h2>Langostinos Rebeldes</h2>
+    <h2 id="plato-30">Langostinos Rebeldes</h2>
     <img src="./fotos/rebelde.jpg" alt="Langostinos Rebeldes">
     <p>Langostinos salteados con ajo, chile y especias, acompañados de una salsa picante.</p>
+    <div class="pedido-plato">
+        <p><strong>$ 20.500</strong></p>
+        <button type="button" class="boton-formulario" id="agregar-30" aria-labelledby="agregar-30 plato-30" onclick="agregarProducto('plato-30', 20500)">Agregar al carrito</button>
+    </div>
 </div>
 
 <div class="plato">
-    <h2>La Maldición del Ají</h2>
+    <h2 id="plato-31">La Maldición del Ají</h2>
     <img src="./fotos/papas.jpg" alt="La Maldición del Ají">
     <p>Papas rústicas doradas, acompañadas de una intensa salsa brava.</p>
+    <div class="pedido-plato">
+        <p><strong>$ 7.000</strong></p>
+        <button type="button" class="boton-formulario" id="agregar-31" aria-labelledby="agregar-31 plato-31" onclick="agregarProducto('plato-31', 7000)">Agregar al carrito</button>
+    </div>
 </div>
 
 <div class="plato">
-    <h2>Estofado Mortal</h2>
+    <h2 id="plato-32">Estofado Mortal</h2>
     <img src="./fotos/mortal.jpg" alt="Estofado Mortal">
     <p>Estofado de carne cocida lentamente con vegetales, especias y una salsa bien picante.</p>
+    <div class="pedido-plato">
+        <p><strong>$ 18.500</strong></p>
+        <button type="button" class="boton-formulario" id="agregar-32" aria-labelledby="agregar-32 plato-32" onclick="agregarProducto('plato-32', 18500)">Agregar al carrito</button>
+    </div>
 </div>
    </section>
 </main>
@@ -121,5 +165,6 @@
 
     <!-- SCRIPT EXTERNO COMÚN -->
     <script src="menu.js"></script>
+    <script src="carrito.js"></script>
 </body>
 </html>

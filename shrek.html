@@ -25,53 +25,97 @@
 <main>
     <section class="menu-general">
         <h1 class="titulo-fiona">PASTELERÍA HORRIPILANTE</h1>
+
+        <section class="carrito" aria-labelledby="titulo-carrito">
+            <h2 id="titulo-carrito">Carrito</h2>
+            <p>Simulación de pedido. Los precios son ficticios.</p>
+            <div aria-live="polite">
+                <ul id="productos-carrito">
+                    <li>El carrito está vacío.</li>
+                </ul>
+                <p><strong>Total: <span id="total-carrito">$ 0</span></strong></p>
+            </div>
+            <button type="button" class="boton-formulario" onclick="vaciarCarrito()">Vaciar</button>
+        </section>
         
 <div class="plato">
-    <h2>Torta de Lodo</h2>
+    <h2 id="plato-9">Torta de Lodo</h2>
     <img src="./fotos/torta-lodo.jpg" alt="Torta de Lodo">
     <p>Torta húmeda de chocolate con crema de pistacho.</p>
+    <div class="pedido-plato">
+        <p><strong>$ 8.500</strong></p>
+        <button type="button" class="boton-formulario" id="agregar-9" aria-labelledby="agregar-9 plato-9" onclick="agregarProducto('plato-9', 8500)">Agregar al carrito</button>
+    </div>
 </div>
 
 <div class="plato">
-    <h2>El Eructo de Shrek</h2>
+    <h2 id="plato-10">El Eructo de Shrek</h2>
     <img src="./fotos/eructo-shrek.jpg" alt="El Eructo de Shrek">
     <p>Volcán de chocolate caliente acompañado de helado de vainilla.</p>
+    <div class="pedido-plato">
+        <p><strong>$ 9.500</strong></p>
+        <button type="button" class="boton-formulario" id="agregar-10" aria-labelledby="agregar-10 plato-10" onclick="agregarProducto('plato-10', 9500)">Agregar al carrito</button>
+    </div>
 </div>
 
 <div class="plato">
-    <h2>Botones de Gomita</h2>
+    <h2 id="plato-11">Botones de Gomita</h2>
     <img src="./fotos/botones-gomita.jpg" alt="Botones de Gomita">
     <p>Masitas dulces de distintos colores y sabores, inspiradas en los botones de Jengi.</p>
+    <div class="pedido-plato">
+        <p><strong>$ 6.000</strong></p>
+        <button type="button" class="boton-formulario" id="agregar-11" aria-labelledby="agregar-11 plato-11" onclick="agregarProducto('plato-11', 6000)">Agregar al carrito</button>
+    </div>
 </div>
 
 <div class="plato">
-    <h2>Orejas de Ogro</h2>
+    <h2 id="plato-12">Orejas de Ogro</h2>
     <img src="./fotos/orejas-ogro.jpg" alt="Orejas de Ogro">
     <p>Medialunas rellenas de dulce de leche y bañadas en chocolate.</p>
+    <div class="pedido-plato">
+        <p><strong>$ 6.500</strong></p>
+        <button type="button" class="boton-formulario" id="agregar-12" aria-labelledby="agregar-12 plato-12" onclick="agregarProducto('plato-12', 6500)">Agregar al carrito</button>
+    </div>
 </div>
 
 <div class="plato">
-    <h2>Besos de Fiona</h2>
+    <h2 id="plato-13">Besos de Fiona</h2>
     <img src="./fotos/besos-fiona.jpg" alt="Besos de Fiona">
     <p>Cheesecake cremoso con una cobertura de frutos rojos.</p>
+    <div class="pedido-plato">
+        <p><strong>$ 8.500</strong></p>
+        <button type="button" class="boton-formulario" id="agregar-13" aria-labelledby="agregar-13 plato-13" onclick="agregarProducto('plato-13', 8500)">Agregar al carrito</button>
+    </div>
 </div>
 
 <div class="plato">
-    <h2>Manzana de Azufre</h2>
+    <h2 id="plato-14">Manzana de Azufre</h2>
     <img src="./fotos/manzana-azufre.jpg" alt="Manzana de Azufre">
     <p>Apple crumble de manzanas caramelizadas con canela y una cubierta crocante.</p>
+    <div class="pedido-plato">
+        <p><strong>$ 8.000</strong></p>
+        <button type="button" class="boton-formulario" id="agregar-14" aria-labelledby="agregar-14 plato-14" onclick="agregarProducto('plato-14', 8000)">Agregar al carrito</button>
+    </div>
 </div>
 
 <div class="plato">
-    <h2>Pantano de Pistacho</h2>
+    <h2 id="plato-15">Pantano de Pistacho</h2>
     <img src="./fotos/pantano-pistacho.jpg" alt="Pantano de Pistacho">
     <p>Tiramisú de pistacho con una suave crema de mascarpone.</p>
+    <div class="pedido-plato">
+        <p><strong>$ 10.000</strong></p>
+        <button type="button" class="boton-formulario" id="agregar-15" aria-labelledby="agregar-15 plato-15" onclick="agregarProducto('plato-15', 10000)">Agregar al carrito</button>
+    </div>
 </div>
 
 <div class="plato">
-    <h2>Felices para Siempre</h2>
+    <h2 id="plato-16">Felices para Siempre</h2>
     <img src="./fotos/felices-siempre.jpg" alt="Felices para Siempre">
     <p>Brownie tibio con helado de crema americana y salsa de chocolate.</p>
+    <div class="pedido-plato">
+        <p><strong>$ 9.000</strong></p>
+        <button type="button" class="boton-formulario" id="agregar-16" aria-labelledby="agregar-16 plato-16" onclick="agregarProducto('plato-16', 9000)">Agregar al carrito</button>
+    </div>
 </div>
     </section>
 </main>
@@ -121,5 +165,6 @@
 
     <!-- SCRIPT EXTERNO COMÚN -->
     <script src="menu.js"></script>
+    <script src="carrito.js"></script>
 </body>
 </html>

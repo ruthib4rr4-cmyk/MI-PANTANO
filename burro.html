@@ -25,53 +25,97 @@
 <main>
     <section class="menu-general">
         <h1 class="titulo-fiona">Elegidos de burro</h1>
+
+        <section class="carrito" aria-labelledby="titulo-carrito">
+            <h2 id="titulo-carrito">Carrito</h2>
+            <p>Simulación de pedido. Los precios son ficticios.</p>
+            <div aria-live="polite">
+                <ul id="productos-carrito">
+                    <li>El carrito está vacío.</li>
+                </ul>
+                <p><strong>Total: <span id="total-carrito">$ 0</span></strong></p>
+            </div>
+            <button type="button" class="boton-formulario" onclick="vaciarCarrito()">Vaciar</button>
+        </section>
         
 <div class="plato">
-    <h2>Banquete de Muy Muy Lejano</h2>
+    <h2 id="plato-17">Banquete de Muy Muy Lejano</h2>
     <img src="./fotos/banquete.jpeg" alt="Banquete de Muy Muy Lejano">
     <p>Milanesa de ternera dorada y crujiente, acompañada de papas rústicas y salsa de queso.</p>
+    <div class="pedido-plato">
+        <p><strong>$ 18.000</strong></p>
+        <button type="button" class="boton-formulario" id="agregar-17" aria-labelledby="agregar-17 plato-17" onclick="agregarProducto('plato-17', 18000)">Agregar al carrito</button>
+    </div>
 </div>
 
 <div class="plato">
-    <h2>Hamburguesa mega super del Ogro</h2>
+    <h2 id="plato-18">Hamburguesa mega super del Ogro</h2>
     <img src="./fotos/hamburguesa-ogro.jpg" alt="Hamburguesa del Ogro">
     <p>Hamburguesa casera con cheddar fundido, panceta crocante, cebolla caramelizada y papas fritas.</p>
+    <div class="pedido-plato">
+        <p><strong>$ 16.000</strong></p>
+        <button type="button" class="boton-formulario" id="agregar-18" aria-labelledby="agregar-18 plato-18" onclick="agregarProducto('plato-18', 16000)">Agregar al carrito</button>
+    </div>
 </div>
 
 <div class="plato">
-    <h2>Necesito que me apapachen</h2>
+    <h2 id="plato-19">Necesito que me apapachen</h2>
     <img src="./fotos/pollo-fiona.jpg" alt="Necesito que me apapachen">
     <p>Pechuga de pollo grillada, acompañada de vegetales asados y puré de calabaza.</p>
+    <div class="pedido-plato">
+        <p><strong>$ 16.500</strong></p>
+        <button type="button" class="boton-formulario" id="agregar-19" aria-labelledby="agregar-19 plato-19" onclick="agregarProducto('plato-19', 16500)">Agregar al carrito</button>
+    </div>
 </div>
 
 <div class="plato">
-    <h2>Soy una costilla de verdad</h2>
+    <h2 id="plato-20">Soy una costilla de verdad</h2>
     <img src="./fotos/costillas.jpg" alt="Son costillas de verdad">
     <p>Costillas de cerdo tiernas y jugosas, bañadas en salsa barbacoa y acompañadas de papas al horno.</p>
+    <div class="pedido-plato">
+        <p><strong>$ 22.000</strong></p>
+        <button type="button" class="boton-formulario" id="agregar-20" aria-labelledby="agregar-20 plato-20" onclick="agregarProducto('plato-20', 22000)">Agregar al carrito</button>
+    </div>
 </div>
 
 <div class="plato">
-    <h2>Ravioles de moco</h2>
+    <h2 id="plato-21">Ravioles de moco</h2>
     <img src="./fotos/ravioles.jpg" alt="Ravioles de moco">
     <p>Ravioles caseros de ricota y espinaca, servidos con una cremosa salsa de hongos.</p>
+    <div class="pedido-plato">
+        <p><strong>$ 17.500</strong></p>
+        <button type="button" class="boton-formulario" id="agregar-21" aria-labelledby="agregar-21 plato-21" onclick="agregarProducto('plato-21', 17500)">Agregar al carrito</button>
+    </div>
 </div>
 
 <div class="plato">
-    <h2>Troto, troto, relincho</h2>
+    <h2 id="plato-22">Troto, troto, relincho</h2>
     <img src="./fotos/pizza.jpg" alt="Troto, troto, relincho">
     <p>Pizza de mozzarella fundida, tomates cherry, albahaca fresca y aceitunas.</p>
+    <div class="pedido-plato">
+        <p><strong>$ 15.500</strong></p>
+        <button type="button" class="boton-formulario" id="agregar-22" aria-labelledby="agregar-22 plato-22" onclick="agregarProducto('plato-22', 15500)">Agregar al carrito</button>
+    </div>
 </div>
 
 <div class="plato">
-    <h2>Risotto encantador</h2>
+    <h2 id="plato-23">Risotto encantador</h2>
     <img src="./fotos/risotto.jpg" alt="Risotto del Bosque Encantado">
     <p>Arroz cremoso con hongos salteados, queso parmesano y hierbas frescas.</p>
+    <div class="pedido-plato">
+        <p><strong>$ 17.000</strong></p>
+        <button type="button" class="boton-formulario" id="agregar-23" aria-labelledby="agregar-23 plato-23" onclick="agregarProducto('plato-23', 17000)">Agregar al carrito</button>
+    </div>
 </div>
 
 <div class="plato">
-    <h2>El Festín de Burro</h2>
+    <h2 id="plato-24">El Festín de Burro</h2>
     <img src="./fotos/festin-burro.jpg" alt="El Festín de Burro">
     <p>Sándwich de bondiola desmechada, salsa barbacoa y ensalada de repollo, acompañado de papas fritas.</p>
+    <div class="pedido-plato">
+        <p><strong>$ 15.000</strong></p>
+        <button type="button" class="boton-formulario" id="agregar-24" aria-labelledby="agregar-24 plato-24" onclick="agregarProducto('plato-24', 15000)">Agregar al carrito</button>
+    </div>
 </div>    </section>
 </main>
 <footer class="info-inicio">
@@ -120,5 +164,6 @@
 
     <!-- SCRIPT EXTERNO COMÚN -->
     <script src="menu.js"></script>
+    <script src="carrito.js"></script>
 </body>
 </html>
