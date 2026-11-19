@@ -91,13 +91,23 @@ header {
     transform: rotate(5deg) scale(1.05);
 }
 
+/* Tira horizontal decorativa de madera rústica detrás de los botones */
 nav ul {
     display: flex;
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 5px 18px;
     gap: 25px;
     align-items: center;
+    background: linear-gradient(90deg, rgba(255,255,255,0.04) 0%, rgba(0,0,0,0.12) 30%, rgba(255,255,255,0.06) 65%, rgba(0,0,0,0.15) 100%),
+                linear-gradient(180deg, #744b22 0%, #5a3614 35%, #44260d 70%, #543314 100%);
+    border: 2px solid #361e08;
+    border-top: 2px solid #8e5c2d;
+    border-bottom: 2px solid #241304;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35),
+                inset 0 1px 2px rgba(255, 255, 255, 0.25),
+                inset 0 -2px 4px rgba(0, 0, 0, 0.5);
 }
 
 nav li {
@@ -111,13 +121,14 @@ nav a {
     padding: 8px 12px;
     border-radius: 8px;
     border-bottom: 2px solid transparent;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
     transition: all 0.3s ease;
 }
 
 nav a:hover {
     color: var(--color-oro-brillante);
     border-bottom-color: var(--color-oro-brillante);
-    background-color: rgba(255, 255, 255, 0.06);
+    background-color: rgba(255, 255, 255, 0.08);
 }
 
 .menu-hamburguesa {
@@ -849,13 +860,14 @@ nav a:hover {
     nav ul {
         flex-direction: column;
         gap: 12px;
-        padding: 15px 0 5px;
+        padding: 15px 12px;
+        border-radius: 12px;
     }
 
     nav a {
         display: block;
         padding: 10px;
-        background-color: rgba(255, 255, 255, 0.05);
+        background-color: rgba(0, 0, 0, 0.2);
     }
 
     .hero-inicio h1.titulo-inicio {
