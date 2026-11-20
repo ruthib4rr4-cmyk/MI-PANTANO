@@ -1,4 +1,11 @@
 // Todas las páginas de platos usan la misma clave del navegador.
+// CONFIGURACIÓN DEL CARRITO
+// const: declara una variable que no se puede reasignar.
+// claveCarrito: nombre utilizado para guardar el carrito en el navegador.
+// let: declara una variable cuyo valor puede cambiar.
+// []: array o lista donde se guardan los productos.
+// true: significa verdadero.
+// localStorage: permite guardar información en el navegador.
 const claveCarrito = "mi-pantano-carrito";
 let productosSeleccionados = [];
 let almacenamientoDisponible = true;
@@ -9,7 +16,13 @@ function cargarCarrito() {
     }
 
     try {
-        // localStorage guarda texto. JSON.parse recupera el array.
+        // localStorage guarda texto. JSON.parse recupera el array.// CONFIGURACIÓN DEL CARRITO
+// const: declara una variable que no se puede reasignar.
+// claveCarrito: nombre utilizado para guardar el carrito en el navegador.
+// let: declara una variable cuyo valor puede cambiar.
+// []: array o lista donde se guardan los productos.
+// true: significa verdadero.
+// localStorage: permite guardar información en el navegador.
         const guardado = localStorage.getItem(claveCarrito);
         const productos = JSON.parse(guardado);
 
