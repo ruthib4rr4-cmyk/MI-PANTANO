@@ -22,11 +22,21 @@
             </ul>
         </nav>
     </header>
-
+       <!-- FORMULARIO DE RESERVAS
+     form: agrupa los campos del formulario.
+     div: organiza cada campo.
+     label: indica qué dato debe ingresar la persona.
+     for: relaciona el label con el ID del input.
+     input: permite ingresar información.
+     type: define el tipo de dato esperado.
+     id: identifica el campo para utilizarlo con JavaScript.
+     name: identifica el dato dentro del formulario.
+     required: indica que el campo es obligatorio.
+     placeholder: muestra un ejemplo dentro del campo. -->
     <main class="pagina-reservas">
         <section class="seccion-formulario">
             <h1 class="titulo-fiona">RESERVÁ TU MESA EN EL PANTANO</h1>
-            <p class="subtitulo-seccion">Asegurá tu lugar antes de que lleguen todas las criaturas del reino.</p>
+            <p class="subtitulo-seccion">Asegurá tu lugar antes de que lleguen todas las criaturas del reino encantado.</p>
 
             <div class="contenedor-formulario">
                 <form id="form-reservas">
@@ -45,7 +55,14 @@
                             <label for="res-fecha">Fecha de la Reserva</label>
                             <input type="date" id="res-fecha" name="fecha" required>
                         </div>
-
+<!-- SELECTOR DE HORARIOS
+     select: crea una lista desplegable.
+     option: representa cada horario disponible.
+     value: es el dato que obtiene JavaScript.
+     selected: indica la opción que aparece inicialmente.
+     disabled: impide seleccionar una opción.
+     optgroup: agrupa los horarios en almuerzo, merienda y cena.
+     required: obliga a elegir un horario. -->
                         <div class="campo-form campo-mitad">
                             <label for="res-hora">Horario</label>
                             <select id="res-hora" name="hora" required>
