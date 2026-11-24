@@ -1015,3 +1015,58 @@ header nav a:focus-visible {
         font-size: 16px;
     }
 }
+/* Decoración de lianas del pantano */
+
+/* Decoración de todos los carritos del pantano */
+
+.carrito {
+    position: relative;
+    border: 4px solid #526b32;
+    border-radius: 20px;
+    background-color: #f5f0df;
+    padding: 45px;
+    box-shadow: 0 5px 15px #00000030;
+}
+
+.carrito::before,
+.carrito::after {
+    content: "🌿🍃🌿🍃🌿🍃🌿";
+    position: absolute;
+    font-size: 45px;
+    pointer-events: none;
+    writing-mode: vertical-rl;
+    z-index: 1;
+}
+
+.carrito::before {
+    top: -15px;
+    left: -25px;
+    transform: rotate(8deg);
+}
+
+.carrito::after {
+    top: -15px;
+    right: -25px;
+    transform: rotate(-8deg);
+}
+
+/* Adaptación a celulares */
+
+@media (max-width: 600px) {
+    .carrito {
+        padding: 25px;
+    }
+
+    .carrito::before,
+    .carrito::after {
+        font-size: 25px;
+    }
+
+    .carrito::before {
+        left: -12px;
+    }
+
+    .carrito::after {
+        right: -12px;
+    }
+}
